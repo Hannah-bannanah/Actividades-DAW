@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es" class="formAdopcion">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/>
+        <script src="js/script.js" defer></script>
+        <title>Formulario de Adopcion</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+    <body onload="prerrellenarFormulario()"> <!--al cargarse la página, se prellenan los campos que se le hayan pasado por url-->
+        <nav class="barra">
+            <ul class="menu nav"> 
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>            
+                <li> <a href="formularioAdopcion.html" class="pagina-actual">Formulario de Adopci&oacute;n</a></li>
+                <li><button id="abrir-submenu" onclick="abrirSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li><button id="cerrar-submenu" onclick="cerrarSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li id="nuestras-mascotas"><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu" id="submenu-barra">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+        <nav class="movil">
+            <input type="checkbox" name="menu-movil" id="menu-movil">
+            <label for="menu-movil"><img id="abrir-menu" src="images/iconmenu.png" alt="Abrir menu de navegaci&oacute;n"><img id="cerrar-menu" src="images/iconcerrar.png" alt=""></label>
+            <ul class="menu nav"> 
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a></li> 
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html" class="pagina-actual">Formulario de Adopci&oacute;n</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Formulario de Adopci&oacute;n</h1>
+        </header>
+        <main>
+            <form action="recibido.html" method="POST"> <!--Escogido acción post porque hay información personal. Cambiar a GET para ver parámetros al enviar-->
+                <fieldset id="datos-contacto">
+                    <legend>Datos de Contacto</legend>
+                    <label for="name">Nombre y apellidos</label>
+                    <input type="text" id="name" name="user_name" autofocus required>
+                    <section class="columna izq">
+                        <label for="tlf">Teléfono</label>
+                        <input type="tel" id="tlf" name="user_telefono" placeholder="+34xxxxxxxxx" required pattern="\+34[0-9]{9}">
+                    </section>
+                    <section class="columna dcha">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="user_email" required><br>
+                    </section> 
+                </fieldset>
+                <fieldset id="datos-mascota">
+                    <legend>Datos sobre la mascota deseada</legend>
+                    <input type="checkbox" name="mascotaElegida" id="mascotaElegida" value=true onclick="toggleDatosMascota()"> <!--Si el usuario ya ha elegido una mascota concreta, ciertos campos del formulario se deshabilitarán-->
+                    <label for="mascotaElegida">Ya he elegido la mascota que quiero adoptar (introducir ID)</label><br>
+                    <input type="text" name="idMascota" id="idMascota" placeholder="xx-xxxx" pattern="[gpo]{2}-[a-z0-9]{4}" disabled>
+                    <label for="idMascota">ID Mascota*</label><br>
+                    <p class="observacion">*Puedes encontrar el ID de la mascota en su ficha en <a href="mascotas.html">Nuestras mascotas</a></p><br>
+                    <section class="columna izq">
+                        <label for="especie">Especie</label>
+                        <select name="especie" id="especie" required class="izq">
+                            <option value="" selected>Elige especie</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                        </select>
+                    </section>
+                    <section class="columna dcha">
+                        <label for="sexo">Sexo</label><br>
+                        <select name="sexo" id="sexo" required class="dcha">
+                            <option value="" selected>Elige sexo</option>
+                            <option value="macho">Macho</option>
+                            <option value="hembra">Hembra</option>
+                            <option value="irrelevante">Me da igual</option>
+                        </select>
+                    </section>
+                    <section class="columna izq">
+                        <label for="edad">Edad</label><br>
+                        <select name="edad" id="edad" required class="izq">
+                            <option value="" selected>Elige edad</option>
+                            <option value="cachorro">Cachorro</option>
+                            <option value="joven">Joven</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="mayor">Mayor</option>
+                            <option value="irrelevante">Me da igual</option>
+                        </select>
+                    </section>
+                    <section class="columna dcha"> 
+                        <label for="tamMascota">Tama&ntilde;o</label>
+                        <select name="tamanio" id="tamMascota" multiple class="dcha">
+                            <option value="pequenio" selected>&lt; 10kg</option>
+                            <option value="mediano" selected>10kg - 20kg</option>
+                            <option value="grande" selected>20kg - 35kg</option>
+                            <option value="gigante" selected>&gt; 35kg</option>
+                        </select>
+                    </section>
+                </fieldset>
+                <fieldset id="datos-entorno">
+                    <legend>Datos de tu entorno</legend>
+                    <input type="checkbox" name="acogida" id="acogida" value=true>
+                    <label for="acogida">Quiero convertirme en casa de acogida, no adoptar de forma permanente</label><br>
+                    <p>Nota: no hay respuestas más o menos válidas a las preguntas sobre tu entorno. Queremos asegurar la compatibilidad de nuestras mascotas con el entorno en el que vivirán.</p>
+                    <fieldset id=vivienda onchange="toggleDescripcionVivienda()">
+                        <legend>&iquest;En qué tipo de vivienda vives?</legend>
+                        <input type="radio" name="vivienda" id="piso" value="piso">
+                        <label for="piso">Piso</label><br>
+                        <input type="radio" name="vivienda" id="casa" value="casa">
+                        <label for="casa">Casa&#47;Chalet</label><br>
+                        <input type="radio" name="vivienda" id="otraVivienda" value="otro">
+                        <label for="otraVivienda">Otro (introducir explicaci&oacute;n)</label>
+                        <textarea name="descVivienda" id="descVivienda" cols="40" rows="2" maxlength="100" placeholder="Describe tu vivienda" disabled></textarea>
+                        <label for="descVivienda">Describe tu vivienda</label>
+                    </fieldset>
+                    <fieldset id="animales">
+                        <legend>&iquest;Qu&eacute; otros animales tienes?</legend>
+                        <input type="radio" name="animales" id="gato" value="gato">
+                        <label for="gato">Gato(s)</label><br>
+                        <input type="radio" name="animales" id="perro" value="perro">
+                        <label for="perro">Perro(s)</label><br>
+                        <input type="radio" name="animales" id="otroAnimal" value="otro">
+                        <label for="otroAnimal">Otro(s)</label><br>
+                        <input type="radio" name="animales" id="sinAnimales" value="ninguno">
+                        <label for="sinAnimales">No tengo otros animales</label>
+                    </fieldset>
+                    <fieldset id="experiencia">
+                        <legend>&iquest;Tienes experiencia con animales de la especie que buscas?</legend>
+                        <input type="radio" name="experiencia" id="conExp" value="si">
+                        <label for="conExp">S&iacute;</label>
+                        <input type="radio" name="experiencia" id="sinExp" value="no">
+                        <label for="sinExp">No</label>
+                        <br>
+                    </fieldset>
+                    <fieldset id="ninios">
+                        <legend>&iquest;Convives con o tienes visitas habituales de ni&ntilde;os?</legend>
+                        <input type="radio" name="ninios" id="conNinios" value="si">
+                        <label for="conNinios">S&iacute;</label>
+                        <input type="radio" name="ninios" id="sinNinios" value="no">
+                        <label for="sinNinios">No</label>  
+                    </fieldset>
+                </fieldset>
+                <section class="botones">
+                    <input type="submit" id="enviarForm" value="Enviar">
+                    <input type="reset" id="resetForm" value="Restablecer">
+                </section>
+            </form>
+        </main>
+        <footer><!--Footer común a todas las páginas-->
+            <section id="texto">
+            <h3>Contacto</h3>
+            <p id="contacto">
+            C/Desengaño, 23, Madrid <br>
+            936 77 77 77<br>
+            dawesomepets@gmail.com
+            Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados. <a href="/aviso-legal.html"> Aviso legal</a> 
+            </p>
+            </section>
+            
+            <section id="redes"><!--Iconos con enlace a redes sociales-->
+                <a href="http://www.instagram.com">
+                    <img src="images/iconinsta.png" alt="Icono Instagram">
+                </a>
+                <a href="http://www.twitter.com">
+                    <img src="images/icontwit.png" alt="Icono Twitter">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="images/iconface.png" alt="Icono Facebook">
+                </a>
+            </section>
+        </footer>
+    </body>
+</html>

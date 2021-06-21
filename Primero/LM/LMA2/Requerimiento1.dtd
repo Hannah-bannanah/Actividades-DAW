@@ -1,0 +1,52 @@
+<!--El elemento raíz es la biblioteca, que contiene 0, 1 o varios
+libros, revistas y periódicos, en cualquier orden-->
+<!ELEMENT biblioteca (libro|revista|periodico)*>
+
+
+<!--subelementos y atributos de los libros-->
+<!ELEMENT libro (titulo, sinopsis, indice, capitulo+)>
+<!ATTLIST libro
+  id ID #REQUIRED
+  tipo_clase (novela|infantil|didactico) #REQUIRED
+  num_paginas CDATA #REQUIRED>
+
+<!ELEMENT sinopsis (#PCDATA)>
+
+<!ELEMENT capitulo (titulo, contenido)>
+<!ATTLIST capitulo num_paginas CDATA #REQUIRED>
+
+
+<!--subelementos y atributos de las revistas-->
+<!ELEMENT revista (titulo, numero, indice, seccion_revista+)>
+<!ATTLIST revista
+  id ID #REQUIRED
+  tipo_clase (informatica|corazon|coches|investigacion|otras) #REQUIRED
+  num_paginas CDATA #REQUIRED>
+
+<!ELEMENT numero (#PCDATA)>
+
+<!ELEMENT seccion_revista (contenido)>
+<!ATTLIST seccion_revista num_paginas CDATA #REQUIRED>
+
+
+<!--subelementos y atributos de los periodicos-->
+<!ELEMENT periodico (indice, seccion_periodico+)>
+<!ATTLIST periodico
+  id ID #REQUIRED
+  tipo_clase (nacional|internacional) #REQUIRED
+  fecha_publicacion CDATA #REQUIRED>
+
+<!ELEMENT seccion_periodico (articulo+)>
+<!ATTLIST seccion_periodico tipo_clase (economica|opinion|deportes|nacional|internacional) #REQUIRED>
+
+<!ELEMENT articulo (contenido)>
+<!ATTLIST articulo autor NMTOKENS #REQUIRED>
+
+
+<!--subelementos comunes a dos o más elementos-->
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT indice (linea_indice+)>
+<!ELEMENT linea_indice (titulo, pagina)>
+<!ELEMENT pagina (#PCDATA)>
+<!ELEMENT contenido EMPTY>
+<!ATTLIST contenido enlace CDATA #REQUIRED>

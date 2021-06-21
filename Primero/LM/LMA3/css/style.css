@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif, Arial;
+    font-size: 18 px;
+    background-color:  #9146ff;
+}
+
+h1{
+    text-align: center;
+    font-size: 250%;
+    padding: 50px;
+    color:floralwhite;
+    letter-spacing: 0.2em;
+}
+
+
+h2{
+    text-align: center;
+    font-size:1.7em;
+    padding: 50px;
+    color:#9146ff;
+}
+
+h3{
+    text-align: left;
+    padding: 20px;
+    color:#5800dd;
+}
+
+/**** Estilo para las secciones ****/
+
+#profesores{
+    width: 20%;
+    float: right;
+}
+
+#reparto, #formulario{
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    box-shadow:15px 1px 30px #5e5858; /*eje-x | eje-y | desenfoque | color */
+}
+
+
+/**** Estilo para las tablas ****/
+
+table{
+    margin-left:10%; /*para darle el mismo margen que a las secciones*/
+    margin-right:10%;
+    text-align: center;
+}
+
+th, td{   /* Formato celdas de cabecera y datos */
+    border-spacing: 0; /*No mostramos líneas de separación entre las celdas. No funciona en Internet Explorer*/
+    border-collapse: collapse; /*No mostramos líneas de separación entre las celdas. No funciona en Internet Explorer*/
+}
+
+th{     /*estilo de las celdas de la cabecera*/
+    background-color: #333333;
+    color:floralwhite;
+}
+
+td{
+    padding: 15px; /*relleno de las celdas que contienen los datos*/    
+}
+
+tbody, thead{
+    height: 50px;   /*altura de las celdas*/
+}
+
+tr:nth-child(2n){ 
+    background-color: #eaeaea; /*color de fondo de las filas impares*/
+}
+
+tr:nth-child(2n+1){ 
+    background-color: #fafafa; /*color de fondo de las filas pares*/
+}
+
+
+
+/**** Estilo para la tabla de Roles ****/
+#tablaRol { /*dejamos un hueco al lado de la tabla para mostrar otro elemento en la misma línea*/
+    display: inline-block;      
+    width: 60%;
+}
+
+/**** Estilo para la tabla de Ciclos ****/
+#ciclos table{
+    box-shadow:15px 1px 30px #5e5858; /*eje-x | eje-y | desenfoque | color */
+    width:80%;
+    margin-bottom: 60px;
+    background-color: #fafafa; /* Para que en IE no aparezcan el borde de las celdas en el color de fondo de la página*/
+}
+
+#ciclos h2{
+    color:floralwhite;
+}
+
+/**** Estilo para las listas ****/
+li{
+    list-style-type:square;
+    list-style-position: inside;
+    padding: 6px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+
+/**** Estilo para los hipervínculos ****/
+a{
+
+    color:rgb(255, 190, 50)
+}
+
+a:hover{
+    color:#fa8072;
+}
+
+/**** Estilo para el formulario de contacto ****/
+form {
+    padding:15px;
+    display: inline-block;
+    width: 65%;
+    margin-left: 4%;
+}
+
+fieldset {
+    border: none; /*Eliminar el borde*/
+}
+
+form fieldset legend {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 1.1em;
+    color:#5800dd;
+}
+
+.columna {
+    width: 45%;
+    display: inline-block;
+    margin: 15px;
+}
+
+#formulario .columna{
+    display:inline;
+}
+
+form input {
+    width: 98%;
+    height: 35px;
+    display: inline;
+    margin:1px;
+    margin-bottom:30px;
+    border: none;
+    border-bottom: 2px solid #9146ff;
+}
+
+#mensaje label{
+    display: none;
+}
+
+/* Formato de los botones de enviar y resetear los formularios*/
+form input[type="submit"], form input[type="reset"]{
+	font-size: 0.9em;
+    display: inline;
+    background-color: #9146ff;
+    color:floralwhite;
+    width: 27%;
+    height: 35px;
+    margin:1px;
+}
+
+#botones{
+    margin-left:30%;
+}
+
+/* Tamaño textarea */
+form textarea{
+    width: 98%;
+    height: 210px;
+    margin-bottom:30px;
+    border: none;
+    border-top: 2px solid #9146ff;
+    border-bottom: 2px solid #9146ff;
+}
+
+/**** Estilo para la seccion de info contacto Proeduca****/
+#empresa {
+    width: 20%;
+    margin-right: 6%;
+    background-color: rgb(255, 190, 50);
+    float:right;
+    height: 100px;
+    text-align: center;
+    font-size: 1.1em;
+    padding-top: 7%;
+    padding-bottom: 10%;
+    color:floralwhite;
+}
+
+#empresa h3{
+    text-align: center;
+}

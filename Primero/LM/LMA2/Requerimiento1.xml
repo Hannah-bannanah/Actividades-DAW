@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "Requerimiento1.dtd">
+
+<biblioteca>
+  <libro id="L0001" tipo_clase="infantil" num_paginas="123">
+    <titulo>La Historia Interminable</titulo>
+    <sinopsis>Si empiezo no acabo</sinopsis>
+    <indice>
+      <linea_indice>
+        <titulo>Cap1</titulo>
+        <pagina>Pag.1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Cap2</titulo>
+        <pagina>Pag.50</pagina>
+      </linea_indice>
+    </indice>
+    <capitulo num_paginas="10">
+      <titulo>Capitulo uno</titulo>
+      <contenido enlace="https://www.w3schools.com/xml/xml_dtd_attributes.asp"/>
+    </capitulo>
+    <capitulo num_paginas="20">
+      <titulo>Capitulo dos</titulo>
+      <contenido enlace="https://www.w3schools.com/xml/xml_dtd_attributes.asp"/>
+    </capitulo>
+  </libro>
+  <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2021-05-01">
+    <indice>
+      <linea_indice>
+        <titulo>Economia</titulo>
+        <pagina>Pag.1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Deportes</titulo>
+        <pagina>Pag.5</pagina>
+      </linea_indice>
+    </indice>
+    <seccion_periodico tipo_clase="economica">
+      <articulo autor="Lady Suprema De la Economia">
+        <contenido enlace="https://www.ft.com/"/>
+      </articulo>
+      <articulo autor="Dr Economista Economatico">
+        <contenido enlace="https://www.ft.com/"/>
+      </articulo>
+    </seccion_periodico>
+    <seccion_periodico tipo_clase="deportes">
+      <articulo autor="Ruth Beitia">
+        <contenido enlace="https://www.marca.com/"/>
+      </articulo>
+      <articulo autor="Mireia Belmonte">
+        <contenido enlace="https://as.com/"/>
+      </articulo>
+    </seccion_periodico>
+  </periodico>
+  <libro id="L0002" tipo_clase="novela" num_paginas="insuficientes">
+    <titulo>Catch 22</titulo>
+    <sinopsis>Si no te lo has leído, ya estás tardando</sinopsis>
+    <indice>
+      <linea_indice>
+        <titulo>Cap1</titulo>
+        <pagina>Pag.1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Cap2</titulo>
+        <pagina>Pag.10</pagina>
+      </linea_indice>
+    </indice>
+    <capitulo num_paginas="10">
+      <titulo>Capitulo uno</titulo>
+      <contenido enlace="https://www.w3schools.com/xml/xml_dtd_attributes.asp"/>
+    </capitulo>
+    <capitulo num_paginas="20">
+      <titulo>Capitulo dos</titulo>
+      <contenido enlace="https://www.w3schools.com/xml/xml_dtd_attributes.asp"/>
+    </capitulo>
+  </libro>
+  <revista id="R0001" tipo_clase="otras" num_paginas="17">
+    <titulo>Jardineria para jardineros jardinerantes</titulo>
+    <numero>1</numero>
+    <indice>
+      <linea_indice>
+        <titulo>Seccion1</titulo>
+        <pagina>Pag.1</pagina>
+      </linea_indice>
+    </indice>
+    <seccion_revista num_paginas="2">
+      <contenido enlace="https://www.verdeesvida.es/"/>
+    </seccion_revista>
+  </revista>
+</biblioteca>

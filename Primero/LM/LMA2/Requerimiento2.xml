@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation= "Requerimiento2.xsd">
+  <libro id="L0001" tipo_clase="infantil" num_paginas="500">
+    <titulo>La Historia Interminable</titulo>
+    <sinopsis>Si empiezo no acabo</sinopsis>
+    <indice>
+      <linea_indice>
+        <titulo>Cap1</titulo>
+        <pagina>1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Cap2</titulo>
+        <pagina>50</pagina>
+      </linea_indice>
+    </indice>
+    <capitulo num_paginas="250">
+      <titulo>Capitulo 1</titulo>
+      <contenido enlace="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+    </capitulo>
+    <capitulo num_paginas="250">
+      <titulo>Capitulo 2</titulo>
+      <contenido enlace="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+    </capitulo>
+  </libro>
+  <periodico tipo_clase="nacional" id="P0001" fecha_publicacion="2021-05-14">
+    <indice>
+      <linea_indice>
+        <titulo>Economia</titulo>
+        <pagina>1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Deportes</titulo>
+        <pagina>5</pagina>
+      </linea_indice>
+    </indice>
+    <seccion tipo_clase="internacional">
+      <articulo autor="Hannah">
+        <contenido enlace=""/>
+      </articulo>
+      <articulo autor="Bannanah">
+        <contenido enlace=""/>
+      </articulo>
+    </seccion>
+    <seccion tipo_clase="deportes">
+      <articulo autor="Hannah">
+        <contenido enlace=""/>
+      </articulo>
+    </seccion>
+  </periodico>
+  <libro id="L0002" tipo_clase="novela" num_paginas="500">
+    <titulo>Catch 22</titulo>
+    <sinopsis>Si no te lo has leído, ya estás tardando</sinopsis>
+    <indice>
+      <linea_indice>
+        <titulo>Cap1</titulo>
+        <pagina>1</pagina>
+      </linea_indice>
+      <linea_indice>
+        <titulo>Cap2</titulo>
+        <pagina>25</pagina>
+      </linea_indice>
+    </indice>
+    <capitulo num_paginas="250">
+      <titulo>Capitulo 1</titulo>
+      <contenido enlace="https://www.youtube.com/watch?v=MZ35SOU9HTM"/>
+    </capitulo>
+    <capitulo num_paginas="250">
+      <titulo>Capitulo 2</titulo>
+      <contenido enlace="https://www.youtube.com/watch?v=wB9YIsKIEbA"/>
+    </capitulo>
+  </libro>
+  <revista id="R0001" tipo_clase= "otras" num_paginas="50">
+    <titulo>Jardineria para jardineros jardinerantes</titulo>
+    <numero>1</numero>
+    <indice>
+      <linea_indice>
+        <titulo>Seccion1</titulo>
+        <pagina>1</pagina>
+      </linea_indice>
+    </indice>
+    <seccion num_paginas="10">
+      <contenido enlace=""/>
+    </seccion>
+    <seccion num_paginas="12">
+      <contenido enlace=""/>
+    </seccion>
+  </revista>
+</biblioteca>

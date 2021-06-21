@@ -1,0 +1,1068 @@
+/*
+    Esta hoja contiene el código css de todas las páginas.
+    El estilo específico para cada página se ha implementado precediendo
+    todos sus selectores con la clase asociada a dicha página (en la
+    tag <html>
+*/
+
+/*
+---------------------------------------------
+---------------------------------------------
+Elementos comunes a todas las páginas
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Formato de base para el body de las páginas*/
+body {
+    background-color: #f8f1f1;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    margin:0;
+    padding-top: 0;
+}
+
+/*Dimensiona los iconos de la barra de navegación*/
+nav img {
+    height: 1em;
+    width: 1em;
+}
+
+/*Esconde el menú de navegación móvil*/
+nav.movil {
+    display: none;
+} 
+
+/*Formato de la barra de navegación*/
+nav.barra {
+    box-sizing: border-box;
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color:rgba(94,170,168, 0.8);
+}
+
+/*Posiciona las lista del menú de navegación*/
+nav.barra ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+/*menú principal*/
+nav.barra .menu > li {
+    float: right;
+    height: 100%;
+}
+
+/*Formato de los links de la barra de navegación*/
+nav a {
+    box-sizing: content-box;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    height: 45px;
+    padding: 12px 12px 0 12px;
+}
+
+/*Oculta el submenú*/
+nav.barra .submenu {
+    display: none;
+}
+
+/*Posiciona los elementos del submenú*/
+nav.barra .submenu li {
+    display: block;
+    position: relative;
+}
+
+/*Formato de los links del submenú*/
+nav.barra .submenu a {
+    display: block;
+    width: 140px;
+    padding: 12px 12px 0 12px;
+    background-color: rgba(94,170,168, 0.8);
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+}
+
+/*Muestra el submenú cuando se pasa el cursor por el elemento del
+menú principal correspondiente*/
+
+nav.barra li:hover ul.submenu {
+    display: block;
+    position: absolute;
+}
+
+/*Cambia el color del links del menú de navegación al pasar el cursor*/
+nav.barra a:hover, nav.barra a.pagina-actual {
+    background-color: #a3d2ca;
+}
+
+
+/*Formato del header*/
+header {
+    height: 30vh;
+    width: 100vw;
+    background-color: #005691;
+    display: table-cell;
+    vertical-align: bottom;
+    clear: both;
+    padding-top: 3%;
+}
+
+.index header{
+    background-image: url(../images/bannerstormi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mascotas header{
+    background-image: url(../images/banneraslan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienesSomos header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannergato.jpg);
+}
+
+form header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannerhappy.jpg);
+}
+
+.formAdopcion header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannersnoppy.jpg);
+}
+
+/*Formato del título del header de cada página*/
+header h1 {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
+/*Formato de h2*/
+h2 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #005691;
+    height: 6%;
+    padding: 1%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5em ;
+}
+
+/*Formato de h3*/
+h3 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 200;
+    color: #005691;
+    height: 4%;
+    display: block;
+    text-align: left;
+    font-size: 2em ;
+}
+
+/*Formato del footer*/
+footer {
+    background-color:rgba(94,170,168, 0.8);
+    clear:both;
+    width:100%;
+    height:20%;
+    text-align: left; 
+    margin-left: 0% !important;
+    margin-top: 10%; 
+    font-size: small;
+    line-height: 25px;
+}
+
+footer #texto{
+    width: 80%;
+    display: inline-block;
+}
+
+footer #contacto {
+    margin-top: 0%;
+    margin-left: 1%;
+}
+
+footer #redes {
+    list-style: none;
+    width: 10%;
+    margin-right: 0%;
+    margin-top: 0%;
+    float: right;
+}
+
+footer #redes a img {
+    font-size: 15px;
+    height: 20px;
+    width: 22px;
+}
+
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de mascotas.html
+---------------------------------------------
+---------------------------------------------
+*/
+/*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+.mascotas #placeholder {
+    width: 30%;
+    display: inline-block;
+    margin-left: 40%;
+    text-align: center;
+    margin-top: 10%;
+    position:absolute;
+    float: left;
+    max-height: 30vh;
+    overflow: auto;
+}
+
+.mascotas #placeholder p {
+    font-size: 1.5em;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #005691;
+}
+
+/*Formato de las secciones sobre cada animal*/
+.mascotas .petInfo {
+    box-sizing: content-box;
+    margin-top: 2%;
+    margin-left: 7%;
+    padding:1%;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.5s;
+}
+
+/*Formato de los artículos sobre cada animal*/
+.mascotas .petInfo article {
+    width: 100%;
+    padding: 3%;
+    display: inline-block;
+    border: 3px solid #5eaaa8;
+    /*border-radius: 5%/10%;*/
+    text-align: left;
+    background-color: #e7f3f1;
+    max-height: 50vh;
+    overflow: scroll;
+    /*box-shadow: 0 0 5px 8px #a3d2ca;*/
+}
+
+/*Formato de las imágenes dentro de cada artículo*/
+.mascotas article img {
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+/*Alineación del título dentro de cada artículo*/
+.mascotas article h2 {
+    text-align: left;
+}
+
+/*Formato del id de Mascota*/
+.mascotas .idMascota {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-size: 1.75em;
+    color: #005691;
+    margin-top: 0;
+}
+
+/*Formato de la bio del animal dentro de cada artículo*/
+.mascotas .bio {
+    width: 55%;
+    display: inline-block;
+    margin-left: 4%;
+}
+
+/*Formato de la tabla dentro de la bio*/
+.mascotas table {
+    line-height: 1.25em;
+    height: max-content;
+}
+
+/*Formato de las celdas de la tabla*/
+.mascotas td {
+    padding: 1%, 2%;
+    border-radius: 1%;
+}
+
+/*Formato del botón de adopción de cada animal*/
+.mascotas .quieroAdoptar {
+    padding: 4%;
+    margin-top: 5%;
+    background-color: #2f2f6a;
+    color: #f8f1f1;
+    border-radius: 5%/10%;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+/*Animación del botón de adopción*/
+
+@-webkit-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-moz-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-o-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@-ms-keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+
+@keyframes giro {
+    0% {
+        height: 100%;
+        rotate: 0;   
+    }
+    25% {
+        height: 105%;
+        rotate: 30deg; 
+    }
+    50% {
+        height: 110%;
+        rotate: 0; 
+    }
+    50% {
+        height: 105%;
+        rotate: -30deg; 
+    }
+    100% {
+        height: 100%;
+        rotate: 0deg; 
+    }
+}
+/*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
+.mascotas .quieroAdoptar:hover {
+    cursor: pointer;
+    -webkit-animation: giro 1s ease-in-out;
+    -moz-animation: giro 1s ease-in-out;
+    -o-animation: giro 1s ease-in-out;
+    -ms-animation: giro 1s ease-in-out;
+    animation: giro 1s ease-in-out;
+}
+/*Formato de las imágenes dentro del panel de selección*/
+.mascotas img.seleccion {
+    width: 15%;
+    display: block;
+    margin: 2%;
+    float: left;
+    clear: left;
+}
+
+/*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
+.mascotas input[type="radio"] { 
+    display:none !important;
+}
+
+/*Muestra el artículo relacionado con con el animal relacionado*/
+.mascotas :checked ~ .petInfo { 
+    visibility: visible;
+    opacity: 1;
+    float: right;
+}
+
+/*Añade sombra a la imagen seleccionada*/
+.mascotas input[type="radio"]:checked + label>img{
+    box-shadow: 0 0 3px 6px #5eaaa8;
+}
+
+/*Posicionamiento del aside*/
+.mascotas aside {
+    float: right;
+    width: 40%;
+    margin-right: 20%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+/*Formato del título del aside*/
+.mascotas #sabiasque h3 {
+    font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-size: 1.5em;
+}
+
+/*Formato del texto del aside*/
+.mascotas #sabiasque p {
+    color: #005691;
+    font-weight: 400;
+}
+
+/*Eliminar decoración del link del aside cuando se ha visitado*/
+.mascotas #sabiasque a, .mascotas #sabiasque a:visited{
+    color:chocolate;
+}
+/*Formato del footer*/
+.mascotas footer {
+    clear:both;
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de index.html
+---------------------------------------------
+---------------------------------------------
+*/
+.index header {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
+
+.index #banner h1{
+    
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #e8f1f5;
+    font-variant: small-caps;
+    height: 8%;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+
+.index h2{
+        font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+        font-weight: 300;
+        color: #005691;
+        height: 6%;
+        padding: 100px 30px 100px 30px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3em ;
+}
+
+.index #banner h1 a img{
+    height: 100%;
+    display:block;
+    margin:0 auto;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-variant: small-caps;
+    height: 30rem;
+    padding: 40px 40px 40px 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4em ;
+}
+.index #text-bnv p{
+    padding: 10px 20% 10px 20%;
+    text-align: justify;
+}
+
+}
+.index #noticias table{
+    table-layout: fixed;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.index #noticias tr{
+    padding: 20px;
+
+}
+
+.index #noticias th, .index #noticias td
+ {
+    padding: 20px;
+  }
+
+.index aside #webamiga {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    width: 15%;
+    position: absolute;
+    background: #a3d2ca;
+    position: absolute;
+    right:3%;
+    top: 700px;
+    height: 70vh;
+    border-radius: 10%/5%;
+    text-align: center;
+    padding: 6% 3%;
+    line-height: 200%;
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo genérico de formularios
+---------------------------------------------
+---------------------------------------------
+*/
+
+form {
+    width: 45%;
+    margin:auto;
+}
+
+form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15%;
+    margin-bottom: 5%;
+	
+}
+
+form fieldset {
+    border: none;
+}
+
+fieldset legend {
+    color: #db6400;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+form input {
+    width:100%;
+	padding: 1% 0 1% 1%;
+	border: none;
+    background-color:white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+form input[type="submit"], form input[type="reset"]{
+	font-size: 0.9em;
+    width: 27%;
+    height: 2em;
+    display: inline;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover{
+	cursor:pointer;
+    color:white;
+    background-color:#5eaaa8;
+    Border:#5eaaa8;
+}
+
+
+form .dcha {
+    float: right;
+}
+
+form .dcha input {
+    padding: 2% 0 1% 2%;
+    margin-right: 1%;
+}
+
+form .izq {
+    float:left 
+}
+form .izq input {
+    padding: 2% 0 1% 2%;
+    margin-right: 1%;
+}
+
+
+
+
+
+
+.formContacto textarea{
+	width:100%;
+	height:100px;
+	border:1px solid white;
+	border-radius:3px;
+	background-color: white;	
+    margin-top: 1%;
+    margin-bottom: 4%;
+	
+}
+
+.formContacto select{
+	height: 25px;
+    padding: 1px;
+    background-color: white;
+    border: white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+
+}
+
+
+.formContacto #introForm {
+    text-align: center;
+    margin: 50px;
+}
+
+form #tlf {
+    width:100%;
+}
+
+form #email {
+    width:100%;
+    margin-right: 0;
+}
+
+.formContacto #prov {
+    width:100%;
+}
+
+.formContacto #loc {
+    width:100%;
+}
+
+form .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+form .botones{
+    display:inline-block;
+    width: 100%;
+    margin-left: 20%;
+    align-items: normal;
+}
+
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de quienesSomos.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+.quienesSomos main{
+    align-items: center;
+}
+
+/*Bloque de texto*/
+.quienesSomos #quienesSomos {
+    margin-right:5%;
+    margin-left:2%;
+    line-height: 25px;
+    width:45%;
+    height:40%;
+    float: left;
+    overflow:auto;
+    margin-bottom:2%;
+    text-align: justify;
+    display: inline-block;
+    
+}
+
+/*Vídeo. Solo hay que separarlo del título principal. 
+Las dimensiones vienen por defecto en el enlace que proporciona Youtube.*/
+.quienesSomos #video iframe{
+    margin-top: 2%;
+    margin-bottom:2%;
+    float: left;
+    width: 45vw; 
+    height: 50vh; 
+}
+
+/*Aside. Publicidad*/
+.quienesSomos #publititulo {
+    position:relative;
+    float:inherit;
+    margin-left: 5%;
+}
+
+/*Aside. Publicidad: imagen 1*/
+.quienesSomos #publicidad #train {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 15%; 
+    height: 25%;
+}
+
+/*Aside. Publicidad: imagen 2*/
+.quienesSomos #publicidad #vet {
+    position:relative;
+    float:left;
+    margin-left: 5%;
+    width: 20%; 
+    height: 10%;
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion
+---------------------------------------------
+---------------------------------------------
+*/
+
+.formAdopcion input {
+    margin-bottom: unset;
+}
+.formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
+.formAdopcion #idMascota {
+    width: unset;
+}
+
+.formAdopcion select {
+    margin-bottom: 1%;
+    padding: 1%;
+    height: 2.3em;
+    background-color: white;
+    border: white;
+    margin-bottom: 4%;
+}
+
+.formAdopcion textarea {
+    width: unset;
+    height: unset;
+}
+
+.formAdopcion #tamMascota {
+    height: unset;
+}
+
+.formAdopcion fieldset fieldset legend {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    text-align: center;
+    font-size: 1em;
+    margin-top: unset;
+    margin-bottom: unset;
+    font-weight: bold;
+}
+.formAdopcion fieldset fieldset label {
+    font-weight: lighter;
+}
+
+.formAdopcion fieldset fieldset {
+    margin-top:2%;
+}
+
+.formAdopcion #datos-contacto section{
+    margin-top: 4%;
+}
+.formAdopcion .observacion {
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+.formAdopcion #casa, .formAdopcion label[for="casa"]  {
+    margin-bottom: 1em;
+}
+
+.formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
+    margin-top:0;
+    vertical-align: top;
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Responsive design
+---------------------------------------------
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    .mascotas main {
+        margin-left: 7%;
+    }
+    .mascotas #placeholder p {
+        font-size: 2em;
+    }
+
+    .mascotas aside {
+        margin-top: unset;
+    }
+
+    .mascotas .petInfo {
+        width: 50%;
+        margin-left:10%
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
+
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
+
+/*Cambios para monitores de menos de 600px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Esconde la barra de navegación de la version web*/
+    .barra {
+        display: none;
+    }
+
+    header {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 1em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /*Revela el menú de navegación móvil*/
+    nav.movil {
+        display: unset;
+    }
+
+    /*Esconde la checkbox que abre y cierra el menú de navegación
+    para que se active/desactive sólo con el label asociado*/
+    #menu-movil {
+        display: none;
+    }
+
+    /*Formato del icono de activación del menú*/
+    label[for="menu-movil"] img{
+        background-color:rgba(94,170,168);
+        height: 50px;
+        width: 50px;
+    }
+
+    /*Esconde el icono de cerrar el menu*/
+    #cerrar-menu {
+        display: none;
+    }
+
+    /*Muestra el menú cuando la checkbox está activada*/
+    #menu-movil:checked ~ .menu {
+        display: unset;
+    }
+
+    /*Muestra el icono de cerrar el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #cerrar-menu {
+        display: unset;
+    }
+
+    /*Esconde el icono de abrir el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #abrir-menu {
+        display: none;
+    }
+
+    /*Esconde el menú de navegación*/
+    .movil ul.menu {
+        display: none;
+    }
+
+    /*Formato de menú de navegación móvil cuando no está abierto*/
+    nav.movil {
+        width: 70%;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 0;
+        position: absolute;
+        z-index: 100;
+        text-align: left;
+    }
+
+    /*Formato de cada elemento del menú de navegación*/
+    .movil ul, .movil ul li {
+        list-style:none;
+        padding-left: 0;
+        background-color:rgba(94,170,168);
+    }
+
+    /*Cambia la alineación del texto de los links a la izquierda*/
+    nav.movil a {
+        text-align: left;
+        padding-left: 5%;
+        border-top: 3px solid gray;
+    }
+    /*Formato del link a la página actual*/
+    .movil a.pagina-actual {
+        background-color: #a3d2ca;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li a{
+        padding-left: 20%;
+        border-top: 1px dashed gray;
+    }
+
+    /*Formato del header en la versión móvil*/
+    .mascotas header {
+        background-image: none;
+    }
+
+    /*Cambia el formato de los artículos para ocupar toda la pantalla
+    y mostrar una sección detrás de otra */
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+
+    /*Quita la animación del botón de adopción -NO FUNCIONA*/
+    .mascotas button {
+        animation:none;
+    }
+        
+}

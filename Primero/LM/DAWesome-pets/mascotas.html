@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es" class="mascotas">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/>
+        <title>Mascotas</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
+    <body onload="mostrarMascota()">
+        <nav class="barra">
+            <ul class="menu nav"> 
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>            
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><button id="abrir-submenu" onclick="abrirSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li><button id="cerrar-submenu" onclick="cerrarSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li id="nuestras-mascotas"><a href="mascotas.html" class="pagina-actual" >Nuestras mascotas</a>
+                    <ul class="submenu" id="submenu-barra">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+        <nav class="movil">
+            <input type="checkbox" name="menu-movil" id="menu-movil">
+            <label for="menu-movil"><img id="abrir-menu" src="images/iconmenu.png" alt="Abrir menu de navegaci&oacute;n"><img id="cerrar-menu" src="images/iconcerrar.png" alt=""></label>
+            <ul class="menu nav"> 
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a></li> 
+                <li><a href="mascotas.html" class="pagina-actual">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Nuestras Mascotas</h1>
+        </header>
+        <main>
+            <section id="placeholder">
+                <p>Selecciona una mascota en el panel de la izquierda para ver más información<p>
+            </section>
+            <section id="pp-asl1">
+                <input  type="radio" name="selectPet" id="checkpp-asl1" class="seleccion">
+                <label for="checkpp-asl1" class="seleccion"><img class="seleccion" src="images/Aslan-bostezando.png" alt="Panel de seleccion - Aslan"></label>     
+                <section class="petInfo">
+                    <article>
+                        <h2>Aslan</h2>
+                        <p class="idMascota">#ID: pp-asl1</p>
+                        <img src="images/Aslan-bostezando.png" alt="Aslan bostezando">
+                        <section class="bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Aslan</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Galgo</td></tr>
+                            </table>
+                            <p>Aslan es un perro hecho para correr y dormir a partes iguales (preferiblemente soñando que corre). Entre sus actividades favoritas se encuentran picar entre horas y despertar a humanos que se echan la siesta mal (i.e. sin soñar que corren).</p>    
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adoppp-asl1" onclick="adoptar('pp-asl1')">Quiero adoptar!!</button>
+                </section>         
+            </section>
+            <section id = "gg-ony5">
+                <input type="radio" name="selectPet" id="checkgg-ony5" class="seleccion">
+                <label for="checkgg-ony5" class="seleccion"><img class="seleccion" src="images/Onyx.png" alt="Panel de seleccion - Onyx"></label>
+                <section class="petInfo">
+                    <article>
+                        <h2>Onyx</h2>
+                        <p class="idMascota">#ID: gg-ony5</p>
+                        <img src="images/Onyx.png" alt="Onyx mirando a Marilyn">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Onyx</td></tr>
+                                <tr><th>Edad</th><td>7 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Gato de bruja con pedigree hasta sexta generación</td></tr>
+                            </table>
+                            <p>Ideal para brujas novatas, ya que Onyx tiene mucha experiencia y puede encontrar los mejores ratones para cada hechizo. Actualmente está encandilado con Marilyn, pero creemos que una vez adoptado se contentará con enviarle cartas eróticofelinas.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adopgg-ony5" onclick="adoptar('gg-ony5')">Quiero adoptar!!</button>
+                </section>
+            </section>
+            <section id="gg-mar9">
+                <input type="radio" name="selectPet" id="checkgg-mar9" class="seleccion">
+                <label for="checkgg-mar9" class="seleccion"><img class="seleccion" src="images/Marilyn-zexxy.png" alt="Panel de seleccion - Marilyn"></label>
+                <section class="petInfo">
+                    <article>
+                    <h2>Marilyn (alias LA GATA)</h2>
+                    <p class="idMascota">#ID: gg-mar9</p>
+                    <img src="images/Marilyn-zexxy.png" alt="Foto de boudoir de Marilyn">
+                    <section class="bio">
+                        <table>
+                            <tr><th>Nombre</th><td>Marilyn</td></tr>
+                            <tr><th>Edad</th><td>7 a&ntilde;os</td></tr>
+                            <tr><th>Sexo</th><td>F</td></tr>
+                            <tr><th>Raza</th><td>Ya te gustaría a ti saberlo</td></tr>
+                        </table>
+                        <p>Marilyn es una gata cariñosa donde las haya, pero hay que tener cuidado porque se te pone en plan seductora en los momentos más incómodos</p>
+                    </section>
+                </article>
+                <button class="quieroAdoptar" id="adopgg-mar9" onclick="adoptar('gg-mar9')">Quiero adoptar!!</button>
+            </section>
+            </section>
+            <section id = "pp-pup4">
+                <input type="radio" name="selectPet" id="checkpp-pup4" class="seleccion">
+                <label for="checkpp-pup4" class="seleccion"><img class="seleccion" src="images/escondite.jpg" alt="Panel de seleccion - Pupok"></label>
+                <section class="petInfo">
+                    <article>
+                        <h2>Pupok</h2>
+                        <p class="idMascota">#ID: pp-pup4</p>
+                        <img src="images/escondite.jpg" alt="Foto de Pupok escondido">
+                        <section class = "bio">
+                            <table>
+                                <tr><th>Nombre</th><td>Pupok</td></tr>
+                                <tr><th>Edad</th><td>3 a&ntilde;os</td></tr>
+                                <tr><th>Sexo</th><td>M</td></tr>
+                                <tr><th>Raza</th><td>Chucho, pero chucho, chucho</td></tr>
+                            </table>
+                            <p>El compañero ideal para los Mortadelos del mundo, con este perro podrás colarte en todas las zonas donde los perros no están permitidos. Biblioteca? Hospital? No importa donde, Pupok se mimetiza con el entorno, es un maestro del camuflaje.</p>
+                        </section>
+                    </article>
+                    <button class="quieroAdoptar" id="adoppp-pup4" onclick="adoptar('pp-pup4')">Quiero adoptar!!</button>
+                </section>
+            </section>
+        </main>
+        <aside>
+            <section id='sabiasque'>
+                <h3>Sabías que ...</h3>
+                <p>... convivir con animales tiene efectos muy positivos sobre la salud de las personas?</p>
+                <a href="https://salud.nih.gov/articulo/el-poder-de-las-mascotas/" target="_blank">Leer más sobre los efectos positivos de las mascotas</a>
+            </section>
+        </aside>
+        <footer><!--Footer común a todas las páginas-->
+            <section id="texto">
+            <h3>Contacto</h3>
+            <p id="contacto">
+            C/Desengaño, 23, Madrid <br>
+            936 77 77 77<br>
+            dawesomepets@gmail.com
+            Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados. <a href="/aviso-legal.html"> Aviso legal</a> 
+            </p>
+            </section>
+            
+            <section id="redes"><!--Iconos con enlace a redes sociales-->
+                <a href="http://www.instagram.com">
+                    <img src="images/iconinsta.png" alt="Icono Instagram">
+                </a>
+                <a href="http://www.twitter.com">
+                    <img src="images/icontwit.png" alt="Icono Twitter">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="images/iconface.png" alt="Icono Facebook">
+                </a>
+            </section>
+        </footer>
+    </body>
+</html>

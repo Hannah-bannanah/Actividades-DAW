@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="index">
+    <head>
+        <meta charset="UTF-8">
+        <title>DAWesomepets</title> 
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
+   
+    </head>
+
+    <body>
+        <!-- Este es el código de la barra de navegación común a todas las páginas-->
+        <nav class="barra">
+            <ul class="menu nav"> 
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>            
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><button id="abrir-submenu" onclick="abrirSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li><button id="cerrar-submenu" onclick="cerrarSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li id="nuestras-mascotas"><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu" id="submenu-barra">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="index.html" class="pagina-actual">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+        <nav class="movil">
+            <input type="checkbox" name="menu-movil" id="menu-movil">
+            <label for="menu-movil"><img id="abrir-menu" src="images/iconmenu.png" alt="Abrir menu de navegaci&oacute;n"><img id="cerrar-menu" src="images/iconcerrar.png" alt=""></label>
+            <ul class="menu nav"> 
+                <li><a href="index.html" class="pagina-actual">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a></li> 
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><a href="formularioContacto.html">Cont&aacute;ctanos</a></li>
+            </ul>
+        </nav>
+
+        <!--Aquí comienza el header que contiene la imagen de fondo y el banner con las letras -->
+
+        <header>
+            <div class="hd-box">
+                <div class="bannerdaw">
+                    <a href="index.html">
+                        <h1>
+                            <img src="images/letterhome.png" alt="DAWesome pets" />
+                        </h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!--El contenido principal de la página, que lo contiene todo hasta el footer-->
+    <main>
+        
+        <!---->
+        <section id="text-bnv">
+            <h2>Bienvenidos</h2>
+            <p>
+            Tratamos a cada animal de manera única y nos volcamos por completo para garantizar 
+            su bienestar físico y psicológico desde el momento que entra a formar parte de nuestra pequeña familia.
+            El <strong> bienestar y calidad de vida es nuestro objetivo.</strong>
+            Algunos dirán que es imposible ayudar a los animales y a la vez respetar estos principios. 
+            Pero nosotros ponemos todos los días nuestro esfuerzo en ello.
+            <br>
+            <p style="text-align: center;">
+                <em>Como no sabía que era imposible, lo hizo.</em>
+            </p>
+        </section>
+
+        <!---->
+        <section id="artabajo">	 			
+            <div class="fondo">
+                <p> <em>”Popuk es nuestro compañero. Es uno más de la familia, le encantan los largos paseos matutinos, tumbarse en su colchón y jugar a la pelota.”</em></p>  
+            </div>
+        </section>
+
+        <!--Sección de noticias-->
+        <section id="news">
+            <div class="contenedornews">
+                <div class="titulocont">
+                    <h3>
+                        Últimas publicaciones
+                    </h3>
+                </div>
+
+                <div class="contenidonoticias">
+                    <div class="cajanoticias">
+                        <div class="cajalat">
+                            <div class="imgcuad">
+                                <a href="#">
+                                    <img class="imgresponsive" src="images/aslanverde.jpg" alt="Un perro mira a la cámara">
+                                    <div class="bl-fecha">
+                                        <h4> 1<br> Mayo </h4>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="contabajo">
+                                <h5>
+                                    <a href="#"> 5 maneras de adaptar tu casa para tu nuevo compañero.</a>
+                                </h5>
+                                <p>
+                                    Antes de que nuestro nuevo compañero llegue a casa deberemos hacer ciertos ajustes para que el entorno sea lo más amable posible para el. Aquí te damos 5 tips para preparate para su llegada.
+                                </p>
+                                <a class="btn-leermas" href="#">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cajanoticias">
+                        <div class="cajalat">
+                            <div class="imgcuad">
+                                <a href="#">
+                                    <img class="imgresponsive" src="images/hermescuad.jpeg" alt="Un perro mira a la cámara">
+                                    <div class="bl-fecha">
+                                        <h4> 12<br>Marzo </h4>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="contabajo">
+                                <h5>
+                                    <a href="#"> Los 10 mejores abrigos para tu perro. Prepárate para el frío</a>
+                                </h5>
+                                <p>
+                                    Aunque quedan 9 meses para invierno, nunca es pronto para prepararnos para él. Winter is coming y tu compañero lo sabe. Si cuando salís por la mañana te trae la bufanda en la boca, tiene frío.
+                                </p>
+                                <a class="btn-leermas" href="#">Leer más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Tablón con varios links de relevancia-->
+        <section id="tablon">
+            <div class="link-index">
+                <div class="container-link">
+                    <div class="row-container-link">
+                        <div class="cont-izda">
+                            <div class="cont-bot">
+                                <h6>
+                                <a href="formularioAdopcion.html">Formulario de adopción</a> 
+                                </h6>
+                            </div>
+                            <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
+                                tempufddfel. Lorem ipsum dolor sit amet Semper at elit.</p>
+                        </div> 
+                        <div class="cont-newslet">
+                            <div class="cont-bot">
+                                <h6 class="tiulo-newsletter">
+                                        Suscríbete a nuestro newsletter.
+                                </h6>
+                            </div>
+
+                            <!--La acción redirije a la página recibido.html-->
+                            <form class="form-nl" action="recibido.html" method="POST">
+                                <div class="form-bod">
+                                    
+                                    <input type="email" id="email" name="user_email" required="">
+                                    <input type="submit" value="Enviar">
+                            
+                                </div>
+                                <p class="form-text">
+                                    Al suscribirte estás accediedo a la
+                                    <a href="#">política de privacidad</a>
+                                    y los
+                                    <a href="#">términos de uso</a>
+
+                                </p>
+                            </form>
+                        </div>
+                        <div class="cont-dcha">
+                                <div class="cont-bot">
+                                <h6>
+                                    <a href="formularioContacto.html">Cóntacta con nosotras</a>
+                                </h6>
+                                </div>
+                                <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
+                                    tempufddfel. Lorem ipsum dolor sit amet Semper at elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+<footer><!--Footer común a todas las páginas-->
+    <section id="texto">
+    <h3>Contacto</h3>
+    <p id="contacto">
+    C/Desengaño, 23, Madrid <br>
+    936 77 77 77<br>
+    dawesomepets@gmail.com
+    Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados. <a href="/aviso-legal.html"> Aviso legal</a> 
+    </p>
+    </section>
+    
+    <section id="redes"><!--Iconos con enlace a redes sociales-->
+        <a href="http://www.instagram.com">
+            <img src="images/iconinsta.png" alt="Icono Instagram">
+        </a>
+        <a href="http://www.twitter.com">
+            <img src="images/icontwit.png" alt="Icono Twitter">
+        </a>
+        <a href="http://www.facebook.com">
+            <img src="images/iconface.png" alt="Icono Facebook">
+        </a>
+    </section>
+</footer>
+</html>

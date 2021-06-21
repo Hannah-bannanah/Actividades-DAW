@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es" class="formContacto">
+    <head>
+        <meta charset="utf-8">
+        <title>Contáctanos</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&family=Poppins:wght@300;400&family=Roboto+Condensed&family=Roboto:wght@300;500&display=swap" rel="stylesheet">     </head>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <nav class="barra">
+            <ul class="menu nav"> 
+                <li><a href="formularioContacto.html" class="pagina-actual">Cont&aacute;ctanos</a></li>            
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><button id="abrir-submenu" onclick="abrirSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li><button id="cerrar-submenu" onclick="cerrarSubmenu()" ><img src="images/iconflecha.png" alt="abrir submenu"></button></li>
+                <li id="nuestras-mascotas"><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu" id="submenu-barra">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+        <nav class="movil">
+            <input type="checkbox" name="menu-movil" id="menu-movil">
+            <label for="menu-movil"><img id="abrir-menu" src="images/iconmenu.png" alt="Abrir menu de navegaci&oacute;n"><img id="cerrar-menu" src="images/iconcerrar.png" alt=""></label>
+            <ul class="menu nav"> 
+                <li><a href="index.html">
+                    <img src="images/iconindex.png" alt="Icono Home" />
+                    </a>
+                </li>   
+                <li><a href="quienesSomos.html">Quienes Somos</a></li> 
+                <li><a href="mascotas.html">Nuestras mascotas</a>
+                    <ul class="submenu">
+                        <li><a href="mascotas.html?idMascota=pp-asl1">Aslan</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-ony5">Onyx</a></li>
+                        <li><a href="mascotas.html?idMascota=gg-mar9">Marilyn</a></li>
+                        <li><a href="mascotas.html?idMascota=pp-pup4">Pupok</a></li>
+                    </ul>
+                </li>
+                <li> <a href="formularioAdopcion.html">Formulario de Adopci&oacute;n</a></li>
+                <li><a href="formularioContacto.html" class= "pagina-actual">Cont&aacute;ctanos</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Contáctanos</h1>
+        </header>
+
+        <main>
+            <p id="introForm">Rellena este formulario y nos pondremos en contacto lo antes posible.</p>
+            <form class="contacto" action="recibido.html" method="post"> <!--Acción redirige al html de "Oído cocina"-->
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                    <label for="name">Nombre y apellidos</label>
+                    <input type="text" id="name" name="user_name" required/><br>
+
+                    <section class="columna izq">
+                        <label for="tlf">Teléfono</label>
+                        <input type="tel" id="tlf" name="user_telefono" placeholder="+34 xxxxxxxxx" required/> <!--El type tel fuerza a introducir nueve dígitos-->
+                    </section>
+                    <section class="columna dcha">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="user_email" required/><br> <!--El type email fuerza a introducir un texto que incluya una @-->
+                    </section>   
+                    
+                    <section class="columna izq">
+                        <label for="prov">Provincia</label><br>
+                        <select id="prov" name="prov">
+                            <option value="vacio">Elige una provincia</option>
+                            <option value="Aco">A Coruña</option>
+                            <option value="Ala">Álava</option>
+                            <option value="Alb">Albacete</option>
+                            <option value="Ali">Alicante</option>
+                            <option value="Alm">Almería</option>
+                            <option value="Ast">Asturias</option>
+                            <option value="Avi">Ávila</option>
+                            <option value="Bad">Badajoz</option>
+                            <option value="Bal">Baleares</option>
+                            <option value="Bar">Barcelona</option>
+                            <option value="Bur">Burgos</option>
+                            <option value="Cac">Cáceres</option>
+                            <option value="Cad">Cádiz</option>
+                            <option value="Can">Cantabria</option>
+                            <option value="Cas">Castellón</option>
+                            <option value="Ceu">Ceuta</option>
+                            <option value="Ciu">Ciudad Real</option>
+                            <option value="Cor">Córdoba</option>
+                            <option value="Cue">Cuenca</option>
+                            <option value="Gip">Gipuzkoa</option>
+                            <option value="Gir">Girona</option>
+                            <option value="Gra">Granada</option>
+                            <option value="Gua">Guadalajara</option>
+                            <option value="Huv">Huelva</option>
+                            <option value="Hus">Huesca</option>
+                            <option value="Jae">Jaén</option>
+                            <option value="Lar">La Rioja</option>
+                            <option value="Las">Las Palmas</option>
+                            <option value="Leo">León</option>
+                            <option value="Ler">Lérida</option>
+                            <option value="Lug">Lugo</option>
+                            <option value="Mad">Madrid</option>
+                            <option value="Mal">Málaga</option>
+                            <option value="Mel">Melilla</option>
+                            <option value="Mur">Murcia</option>
+                            <option value="Nav">Navarra</option>
+                            <option value="Our">Ourense</option>
+                            <option value="Pal">Palencia</option>
+                            <option value="Pon">Pontevedra</option>
+                            <option value="Sal">Salamanca</option>
+                            <option value="San">Santa Cruz de Tenerife</option>
+                            <option value="Seg">Segovia</option>
+                            <option value="Sev">Sevilla</option>
+                            <option value="Sor">Soria</option>
+                            <option value="Tar">Tarragona</option>
+                            <option value="Ter">Teruel</option>
+                            <option value="Tol">Toledo</option>
+                            <option value="Vln">Valencia</option>
+                            <option value="Vll">Valladolid</option>
+                            <option value="Viz">Vizcaya</option>
+                            <option value="Zam">Zamora</option>
+                            <option value="Zar">Zaragoza</option>
+                        </select>                    
+                    </section>
+                    
+                    <section class="columna dcha">
+                        <label for="loc">Localidad</label><br>
+                        <input type="text" id="loc" name="user_loc">
+                    </section>
+                    
+            </fieldset>
+
+            <fieldset> <legend>Mensaje</legend>
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto"><br>
+                    <label for="msg">Mensaje</label>
+                    <textarea name="msg" id="msg" cols="50" rows="4" maxlength="400" placeholder="Escribe aquí tu mensaje"></textarea>
+                    
+            </fieldset>
+            
+            <section class="botones">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </section>
+
+            </form>
+        </main>
+
+        
+        <footer><!--Footer común a todas las páginas-->
+            <section id="texto">
+            <h3>Contacto</h3>
+            <p id="contacto">
+            C/Desengaño, 23, Madrid <br>
+            936 77 77 77<br>
+            dawesomepets@gmail.com
+            Protectora de Animales de Madrid - DAWsome pets © 2021. Todos los derechos reservados. <a href="/aviso-legal.html"> Aviso legal</a> 
+            </p>
+            </section>
+            
+            <section id="redes"><!--Iconos con enlace a redes sociales-->
+                <a href="http://www.instagram.com">
+                    <img src="images/iconinsta.png" alt="Icono Instagram">
+                </a>
+                <a href="http://www.twitter.com">
+                    <img src="images/icontwit.png" alt="Icono Twitter">
+                </a>
+                <a href="http://www.facebook.com">
+                    <img src="images/iconface.png" alt="Icono Facebook">
+                </a>
+                
+            </section>
+        </footer>
+        
+
+    </body>
+    
+
+</html>

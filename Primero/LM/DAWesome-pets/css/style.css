@@ -1,0 +1,1653 @@
+/*
+    Esta hoja contiene el código css de todas las páginas.
+    El estilo específico para cada página se ha implementado precediendo
+    todos sus selectores con la clase asociada a dicha página (en la
+    tag <html>
+*/
+
+/*
+---------------------------------------------
+---------------------------------------------
+Elementos comunes a todas las páginas
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Formato de base para el body de las páginas*/
+body {
+    background-color: #f8f1f1;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    margin:0;
+    padding-top: 0;
+}
+
+/*Dimensiona los iconos de la barra de navegación*/
+nav img {
+    height: 1em;
+    width: 1em;
+}
+
+/*Esconde el menú de navegación móvil*/
+nav.movil {
+    display: none;
+} 
+
+/*Formato de la barra de navegación*/
+nav.barra {
+    box-sizing: border-box;
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color:rgba(94,170,168, 0.8);
+}
+
+/*Posiciona las lista del menú de navegación*/
+nav.barra ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+/*menú principal*/
+nav.barra .menu > li {
+    float: right;
+    height: 100%;
+}
+
+/*Formato de los links de la barra de navegación*/
+nav a {
+    box-sizing: content-box;
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    height: 45px;
+    padding: 12px 12px 0 12px;
+}
+nav a:link{
+    color:black;
+}
+
+nav a:hover{
+    color: black;
+}
+
+/*Oculta el submenú*/
+nav.barra .submenu {
+    display: none;
+    position: absolute;
+}
+
+/*Posiciona los elementos del submenú*/
+nav.barra .submenu li {
+    display: block;
+    position: relative;
+}
+
+/*Formato de los links del submenú*/
+nav.barra .submenu a {
+    display: block;
+    width: 179px;
+    padding: 12px 12px 0 12px;
+    background-color: rgba(94,170,168, 0.8);
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+}
+
+/*Cambia el color del link de la página actual y del link sobre
+el que se pasa el cursor en la barra de navegación*/
+nav.barra a.pagina-actual, nav.barra a:hover {
+    background-color: #a3d2ca;
+}
+
+/*Cambia el formato de los botones de la barra de navegación
+cuando se pasa el cursor sobre ellos*/
+nav.barra button:hover {
+    cursor: pointer;
+    background-color: #a3d2ca;
+}
+
+/*Formato de los bottones de la barra de navegación*/
+nav.barra button {
+    height: 57px;
+    padding: 12px;
+    border:none;
+    background-color: unset;
+}
+/*Formato del botton de cerrar menu*/
+nav.barra #cerrar-submenu {
+    transform: rotate(180deg);
+    display: none;
+}
+
+/*Formato del header*/
+header {
+    height: 30vh;
+    width: 100vw;
+    background-color: #005691;
+    display: table-cell;
+    vertical-align: bottom;
+    clear: both;
+    padding-top: 3%;
+}
+
+.index header{
+    background-image: url(../images/ksbanner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mascotas header{
+    background-image: url(../images/banneraslan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quienesSomos header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannergato.jpg);
+}
+
+.formContacto header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannerhappy.jpg);
+}
+
+.formAdopcion header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bannersnoppy.jpg);
+}
+
+/*Formato del título del header de cada página*/
+header h1 {
+    vertical-align: bottom;
+    font-variant: small-caps;
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    padding-left: 5%;
+    color: #f8f1f1;
+    font-size: 4em;
+}
+/*Formato de h2*/
+h2 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #005691;
+    height: 6%;
+    padding: 1%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5em ;
+}
+
+/*Formato de h3*/
+h3 {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 200;
+    color: #005691;
+    height: 4%;
+    display: block;
+    text-align: left;
+    font-size: 2em ;
+}
+
+/*Formato del footer*/
+footer {
+    background-color:rgba(94,170,168, 0.8);
+    clear:both;
+    width:100%;
+    height:20%;
+    text-align: left; 
+    margin-left: 0% !important;
+    margin-top: 10%; 
+    font-size: small;
+    line-height: 25px;
+}
+
+footer #texto{
+    width: 80%;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+footer #redes {
+    list-style: none;
+    width: 1 0%;
+    margin-top: 0%;
+    float: right;
+    margin-right: 0%;
+}
+
+footer #redes a img {
+    font-size: 15px;
+    height: 20px;
+    width: 22px;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad del menú de navegación y header
+---------------------------------------------
+*/
+
+/*
+No hay cambios necesarios para pantallas de más de 700px
+*/
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Esconde la barra de navegación de la version web*/
+    .barra {
+        display: none;
+    }
+
+    /*Reduce el header a una barra mínima*/
+    header {
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /*Reduce el tamaño de letra de los títulos del header*/
+    header h1 {
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    /*Revela el menú de navegación móvil*/
+    nav.movil {
+        display: unset;
+    }
+
+    /*Esconde la checkbox que abre y cierra el menú de navegación
+    para que se active/desactive sólo con el label asociado*/
+    #menu-movil {
+        display: none;
+    }
+
+    /*Formato del icono de activación del menú*/
+    label[for="menu-movil"] img{
+        background-color:rgba(94,170,168);
+        height: 50px;
+        width: 50px;
+    }
+
+    /*Esconde el icono de cerrar el menu*/
+    #cerrar-menu {
+        display: none;
+    }
+
+    /*Muestra el menú cuando la checkbox está activada*/
+    #menu-movil:checked ~ .menu {
+        display: unset;
+    }
+
+    /*Muestra el icono de cerrar el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #cerrar-menu {
+        display: unset;
+    }
+
+    /*Esconde el icono de abrir el menú cuando el menú está abierto*/
+    #menu-movil:checked ~ label > #abrir-menu {
+        display: none;
+    }
+
+    /*Esconde el menú de navegación*/
+    .movil ul.menu {
+        display: none;
+    }
+
+    /*Formato de menú de navegación móvil cuando no está abierto*/
+    nav.movil {
+        width: 70%;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 0;
+        position: absolute;
+        z-index: 100;
+        text-align: left;
+    }
+
+    /*Formato de cada elemento del menú de navegación*/
+    .movil ul, .movil ul li {
+        list-style:none;
+        padding-left: 0;
+        background-color:rgba(94,170,168);
+    }
+
+    /*Cambia la alineación del texto de los links a la izquierda*/
+    nav.movil a {
+        text-align: left;
+        padding-left: 5%;
+        border-top: 1px solid #005691;
+    }
+    /*Formato del link a la página actual*/
+    .movil a.pagina-actual {
+        background-color: #a3d2ca;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li {
+        height: 2.5em;
+    }
+
+    /*Mueve los elementos del submenú más a la derecha*/ 
+    nav.movil .submenu li a{
+        padding-bottom: 0;
+        padding-left: 30%;
+        border-top: 1px dashed #005691;
+    }
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estílo de hipervínculos
+---------------------------------------------
+---------------------------------------------
+*/
+a:link{
+    color:#2f2f6a;
+}
+
+a:hover {
+    color:#db6400;
+  }
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de mascotas.html
+---------------------------------------------
+---------------------------------------------
+*/
+/*Formato de la zona de artículos cuando ningún animal ha sido seleccionado*/
+.mascotas #placeholder {
+    width: 30%;
+    display: inline-block;
+    margin-left: 40%;
+    text-align: center;
+    margin-top: 10%;
+    position:absolute;
+    float: left;
+    max-height: 30vh;
+    overflow: auto;
+}
+
+.mascotas #placeholder p {
+    font-size: 1.5em;
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-weight: 400;
+    color: #005691;
+}
+
+/*Formato de las secciones sobre cada animal*/
+.mascotas .petInfo {
+    box-sizing: content-box;
+    margin-top: 2%;
+    margin-left: 7%;
+    padding:1%;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden; /*por defecto no se ven, se habilitarán al seleccionar la foto correspondiente en el panel de selección*/
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.5s;
+}
+
+/*Formato de los artículos sobre cada animal*/
+.mascotas .petInfo article {
+    width: 100%;
+    padding: 3%;
+    display: inline-block;
+    border: 3px solid #5eaaa8;
+    text-align: left;
+    background-color: #f8f1f1;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+/*Formato de las imágenes dentro de cada artículo*/
+.mascotas article img {
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+/*Alineación del título dentro de cada artículo*/
+.mascotas article h2 {
+    text-align: left;
+}
+
+/*Formato del id de Mascota*/
+.mascotas .idMascota {
+    font-family: 'Roboto', 'Poppins', Helvetica, sans-serif;
+    font-size: 1.75em;
+    color: #005691;
+    margin-top: 0;
+}
+
+/*Formato de la bio del animal dentro de cada artículo*/
+.mascotas .bio {
+    width: 55%;
+    display: inline-block;
+    margin-left: 4%;
+}
+
+/*Formato de la tabla dentro de la bio*/
+.mascotas table {
+    line-height: 1.25em;
+    height: max-content;
+    background-color: #a3d2ca;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*Formato de la cabecera (lateral) de la tabla*/
+.mascotas th {
+    padding: 2%;
+    border-radius: 2%;
+    border: 1px solid #f8f1f1;
+    width: 30%;
+    background: rgb(163,210,202);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%); /*Gradiente calculado con https://cssgradient.io/ */
+}
+
+/*Formato de las celdas de la tabla*/
+.mascotas td {
+    padding: 2%;
+    border-radius: 2%;
+    border: 1px solid #f8f1f1;
+    background: rgb(163,210,202);
+    background: linear-gradient(90deg, rgba(163,210,202,1) 75%, rgba(94,170,168,1) 100%); /*Gradiente calculado con https://cssgradient.io/ */
+}
+
+/*Formato del botón de adopción de cada animal*/
+.mascotas .quieroAdoptar {
+    padding: 4%;
+    margin-top: 5%;
+    background-color: #005691;
+    border-radius: 5%/10%;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    color: #f8f1f1;
+}
+
+/*Animación del botón de adopción*/
+@-webkit-keyframes giro {
+    25% {height: 105%; -webkit-transform: rotate(30deg);}
+    50% {height: 110%; -webkit-transform: rotate(0deg);}
+    75% {height: 105%; -webkit-transform: rotate(-30deg);}
+    100% {height: 100%; -webkit-transform: rotate(0deg);}
+}
+
+@-moz-keyframes giro {
+    25% {height: 105%; -moz-transform: rotate(30deg);}
+    50% {height: 110%; -moz-transform: rotate(0deg);}
+    75% {height: 105%; -moz-transform: rotate(-30deg);}
+    100% {height: 100%; -moz-transform: rotate(0deg);}
+}
+
+@-o-keyframes giro {
+    25% {height: 105%; -o-transform: rotate(30deg);}
+    50% {height: 110%; -o-transform: rotate(0deg);}
+    75% {height: 105%; -o-transform: rotate(-30deg);}
+    100% {height: 100%; -o-transform: rotate(0deg);}
+}
+
+@-ms-keyframes giro {
+    25% {height: 105%; -ms-transform: rotate(30deg);}
+    50% {height: 110%; -ms-transform: rotate(0deg);}
+    75% {height: 105%; -ms-transform: rotate(-30deg);}
+    100% {height: 100%; -ms-transform: rotate(0deg);}
+}
+
+@keyframes giro {
+    25% {height: 105%; transform: rotate(30deg);}
+    50% {height: 110%; transform: rotate(0deg);}
+    75% {height: 105%; transform: rotate(-30deg);}
+    100% {height: 100%; transform: rotate(0deg);}
+}
+
+/*Formato del botón de adopción de cada cuando se pasa el cursor sobre él*/
+.mascotas .quieroAdoptar:hover {
+    cursor: pointer;
+    -webkit-animation: giro 1s ease-in-out;
+    -moz-animation: giro 1s ease-in-out;
+    -o-animation: giro 1s ease-in-out;
+    -ms-animation: giro 1s ease-in-out;
+    animation: giro 1s ease-in-out;
+}
+/*Formato de las imágenes dentro del panel de selección*/
+.mascotas img.seleccion {
+    width: 15%;
+    display: block;
+    margin: 2%;
+    float: left;
+    clear: left;
+}
+
+/*Esconde los botones de selección del animal, se seleccionará al hacer click sobre la imagen*/
+.mascotas input[type="radio"] { 
+    display:none !important;
+}
+
+/*Muestra el artículo relacionado con con el animal relacionado*/
+.mascotas :checked ~ .petInfo { 
+    visibility: visible;
+    opacity: 1;
+    float: right;
+}
+
+/*Añade sombra a la imagen seleccionada*/
+.mascotas input[type="radio"]:checked + label>img{
+    box-shadow: 0 0 3px 6px #5eaaa8;
+}
+
+/*Posicionamiento del aside*/
+.mascotas aside {
+    float: right;
+    width: 40%;
+    text-align: center;
+    margin: 15% 20% 5% 0;
+}
+
+/*Formato del título del aside*/
+.mascotas #sabiasque h3 {
+    font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+    color: #005691;
+    font-weight: bolder;
+    font-size: 1.5em;
+    font-style: oblique;
+}
+
+/*Formato del texto del aside*/
+.mascotas #sabiasque p {
+    color: #005691;
+}
+
+/*Eliminar decoración del link del aside cuando se ha visitado*/
+.mascotas #sabiasque a, .mascotas #sabiasque a:visited{
+    color: #005691;
+    font-style: oblique;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad de mascotas.html
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    /*Añade espacio en el lado izquierdo de la pantalla*/
+    .mascotas main {
+        margin-left: 7%;
+    }
+
+    /*Reduce el tamaño de letra del texto placeholder*/
+    .mascotas #placeholder p {
+        font-size: 1.8em;
+    }
+
+    /*Reposiciona el aside*/
+    .mascotas aside {
+        margin-top: unset;
+    }
+
+    /*Incrementa el tamaño de los artículos de los animales*/
+    .mascotas .petInfo {
+        width: 50%;
+        margin-left:10%
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+
+    /*Oculta el panel de selección
+    Se mostrarán los artículos directamente*/
+    .mascotas .seleccion, .mascotas #placeholder {
+        display: none;
+    }
+    
+    /*Modifica las secciones de cada animal para 
+    que se muestre como bloques una detrás de otra*/
+    .mascotas section {
+        display: block;
+        position: relative;
+    }
+    
+    /*Modifica la subsección de la información de cada animal
+    para que ocupe todo el ancho de la pantalla y se muestre en bloque*/
+    .mascotas .petInfo {
+        width: 80%;
+        display: block;
+        visibility: visible;
+        opacity: unset;
+        position: relative;
+    }
+    
+    /*Si una mascota ha sido seleccionada (por link directo), 
+    alinea su información con las demás*/
+    .mascotas :checked ~ .petInfo { 
+        visibility: visible;
+        opacity: 1;
+        float: none;
+    }
+
+    /*Quita la restricción de altura de los artículos de animales 
+    (evita scroll)*/
+    .mascotas .petInfo article {
+        max-height: unset;
+    }
+
+    /*Cambia el formato del aside*/
+    .mascotas aside {
+        width: 90%;
+        display: block;
+        float: none;
+        margin:auto;
+    }
+}
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+    /*Formato del header en la versión móvil*/
+    .mascotas header {
+        background-image: none;
+    }
+
+    /*Cambia el formato de los artículos para ocupar toda la pantalla
+    y mostrar una sección detrás de otra */
+    .mascotas article img, .mascotas .bio {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+    }
+
+    /*Elimina el gradiente de la tabla para 
+    evitar sensación de sobrecarga*/
+    .mascotas td, .mascotas th {
+        background: none #a3d2ca;
+    }
+
+    /*Quita la animación del botón de adopción -NO FUNCIONA*/
+    .mascotas button {
+        animation:none;
+    }    
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de index.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Formato específico del header de .index*/
+.index header{
+        display: table-cell;
+        vertical-align: bottom;
+        clear: both;
+        height: 43.5vw;
+        padding-top: 3%;
+}
+
+/*Formato del .hd-box del header que controla la foto*/
+.index header .hd-box{
+    display: block;
+    margin: 0;
+    padding: 10vw 10vw 10vw 10vw;
+    text-align: center;
+}
+
+/*Para desactivar el padding heredado*/
+.index header h1{
+    padding:0;
+}
+
+/*Formato para la imagen que sirve como h1 en el header
+--- También le damos fotmato al título alternativo que 
+--- saldrá en caso de no poder utilizar la imagen*/
+.index a h1 img{
+    font-family: 'Roboto Condensed', 'Montserrat', Helvetica, sans-serif;
+    color: #5eaaa8;
+    font-variant: small-caps;
+    width: 70vw;
+    padding: 4% 4% 4% 4%;
+    text-align: center;
+    font-size: 2.5em ;
+}
+
+/*Formato específico del h2 de .index*/
+.index h2{
+    height: 6%;
+    padding: 10% 4% 4% 4%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.5em ;
+}
+/*Formato específico del h3 de .titulocont*/
+.index .titulocont h3 {
+    padding: 4% 4% 8% 4%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.4em;
+}
+
+/*Formato para el párrafo de #text-bnv*/
+.index #text-bnv p{
+    padding: 1% 20% 1% 20%;
+    text-align: center;
+}
+
+/*Formato general de la seccion #artbajo, un banner formado por una imagen con texto sobre el*/
+.index #artabajo {
+    padding: 5% 20% 5% 20%;
+}
+
+.index #artabajo .fondo{
+    background-image:url(../images/pelotafondo.jpg);  
+    height: 15vw;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.index #artabajo .fondo p{
+    padding: 10% 5% 10% 5%;
+    color: #f8f1f1;
+    text-align:justify;
+    font-size: 1em;
+}
+
+/*Formato del texto enfatizado en #text-bnv*/
+.index #text-bnv p em{
+    background-color: #a3d2ca;
+}
+
+/*Formato general de la seccion #news*/
+.index #news{
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: block;
+    box-sizing: border-box;
+}
+
+/*Con las sucesivas div, vamos creando los contenedores*/
+.index .contenedornews{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem !important;
+    padding-top: 1rem !important;
+
+}
+
+.index .titulocont{
+    text-align: center !important;
+}
+
+/*Aquí, el atributo display en flex nos permite colocar las cajas de noticias de forma paralela*/
+.index .contenidonoticias{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+}
+
+.index .cajanoticias{
+    margin-top: 3rem !important;
+    flex: 0 0 50%;
+    max-width: 50%; 
+    position: relative;
+    width: 100%;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    box-sizing: border-box;
+}
+
+.index .cajalat{
+    margin-bottom: 0 !important;
+    box-sizing: border-box;
+}
+
+.index .imgcuad{
+    position: relative;
+    box-sizing: border-box
+}
+
+.index .imgcuad a{
+    /*He probado a cambiar el pointer cuando pasas por encima de la imagen*/
+    cursor: pointer !important;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.index .imgresponsive{
+    border-radius:6px 6px 0 0;
+    width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+/*Formato sobre los rectángulos que contienen las fechas*/
+.index .bl-fecha{
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 90px;
+    box-sizing: border-box;
+    background-color:  #a3d2ca;
+    border-radius: 6px;
+}
+
+.index .bl-fecha h4{
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    background: transparent;
+    color:#2f2f6a;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/*Esta sección da formato al contenido debajo de la foto*/
+.index .contabajo{
+    border:3px solid #5eaaa8;
+    border-top: none;
+    padding: 2em;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.index .contabajo h5{
+    font-size: 24px;    
+    line-height: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #005691 ;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*Esto es para dar formato al botón de leer más*/
+.btn-leermas{
+    padding: 12px 45px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    transition: 0.3s ease-in;
+    margin-top: 1.5rem !important;
+    color: #005691;
+    background-color: #5eaaa8;
+    border-radius: 5%/10%;
+    border-color: #a3d2ca;
+}
+
+/*Esta sección da formato al tablón que contiene links de adopción, de contacto y la suscripción a newsletter*/
+.link-index{
+    background:#a3d2ca;
+    padding: 2rem 2rem 2rem 2rem !important;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    box-sizing: border-box;
+    border: 3px solid #5eaaa8;
+}
+
+.container-link{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1.5rem !important;
+    padding-top: 1.5rem !important;
+}
+
+.row-container-link{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/*Da formato a la columna de formulario de adopción*/
+.cont-izda{
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+    max-width: 33.33333%;
+}
+
+.cont-izda p{
+    padding-top: 3vw;
+}
+
+/*A continuación, el formato del newsletter*/
+.cont-newslet{
+    max-width: 33.33333%;
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+}
+
+/*Formato especifico para el formulario de index, el resto lo hereda de form*/
+.cont-newslet form{
+    width: 70%;
+}
+
+.form-bod{
+    padding-top: 3vw;
+}
+
+.index .form-bod input[type="submit"]{
+    width: 100%;
+}
+
+.index .form-text{
+    font-size: 0.7em;
+
+}
+
+/*Formato de la columna de contacto*/
+.cont-dcha{
+    text-align: center;
+    padding-left: 1rem !important;
+    padding-right: 1rem;
+    max-width: 33.33333%;
+}
+
+.cont-dcha p{
+    padding-top: 3vw;
+}
+
+/*Formato del h6 usado en los 3 contenedores*/
+.cont-bot{
+    padding: 30px 20px;
+    transition: all 0.5s ease 0s;
+    border-radius: 6px;
+    background-color:#005691;
+    border: 2px solid black;
+    position: relative;
+}
+
+.index h6{
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #f8f1f1;
+}
+.index h6 a:link{
+    color: #f8f1f1;
+}
+.index h6 a:visited{
+    color: #f8f1f1;
+}
+
+.index h6 a:hover{
+    color: #db6400;
+}
+
+/*
+---------------------------------------------
+Adapatabilidad de index.html
+---------------------------------------------
+*/
+
+/* No hay cambios necesarios para monitores de más de 1300px de ancho.*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+
+    /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
+    .index #text-bnv p{
+        margin-top: 50px;
+    }
+
+    .index #text-bnv p em{
+        font-size: 0.8em;
+        background-color: #a3d2ca;
+    }
+
+
+    /*Formato de la foto para adaptarlo a tamaño de 701px a 900px*/
+
+    .index #artabajo .fondo {
+        height: unset;
+    }
+
+    /*Con esto colocamos las dos columnas en una para adaptarlo a un ancho más estrecho*/
+
+    .index .row-container-link{
+        display:block
+    }
+
+    /* Con esto cambiamos la resolucion de los contenedores para ajustarlos al ancho de pantalla*/
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding: 3vw;
+    }
+
+    
+    /* Modificamos la dimensión del formulario de la newsletter */
+    .index .form-bod input[type="submit"] {
+        width: 80%;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        width:80%;
+    }
+    .cont-newslet form{
+        width: 100%;
+    }
+}
+    
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Formato para adaptar el texto sa una pantalla más reducida y eliminar espacios vacíos*/
+    .index #text-bnv p{
+        padding: 1% 5% 1% 5%;
+        text-align: justify;
+    }
+
+    /*En la versión más pequeña quitamos la imagen y dejamos solo el texto que tenía encima*/
+    .index #artabajo .fondo{
+        background-image:none;
+        height: unset;
+    }
+
+    /*Damos formato al texto que estaba arriba cambiándolo de color*/
+    .index #artabajo .fondo p{
+        color:#2f2f6a;
+        padding: 5% 5% 1% 5%;
+    }
+
+    /*Formato de la caja de noticias, que colocaremos en vertical*/
+    .index #news{
+        padding-right: 0.01rem;
+        padding-left: 0.7rem;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .index .contenidonoticias {
+        width: 95%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .index .cajanoticias{
+        max-width: 100%;
+    }
+
+    /*Formato de las cajas del formulario ajustadas a menor resolución*/
+    .index .form-bod input[type="submit"] {
+        width: 80%;
+    }
+    
+    .index .form-nl {
+        padding: 2%;overflow-x:hidden;
+    }
+
+    .index .form-nl .botones input {
+        width: 100%;
+        display: block;
+    }
+
+    .index form #email{
+        margin-top: 6%;
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+        margin-right: 0;
+    }    
+
+    /*Formato del contendor de los links*/
+    .index .row-container-link{
+        display:block
+    }
+
+    .index .cont-izda, .index .cont-dcha, .index .cont-newslet {
+        width: 88%;
+        display: block;
+        clear: both;
+        margin-left: 0;
+        max-width: 100%;
+        padding:0;
+    }
+
+    .contabajo p{
+        text-align: justify ;
+    }
+}
+
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo genérico de formularios
+---------------------------------------------
+---------------------------------------------
+*/
+
+
+/* Estructura que contiene a los formularios */
+form {
+    width: 60%;
+    margin:auto;
+}
+
+/* Formato de las etiquetas de los formularios */
+form label{
+	width: 100%;
+	font-weight:bold;
+    margin-top: 15%;
+    margin-bottom: 5%;
+	
+}
+
+/*Ocultamos la línea que enmarca cada grupo de campos de los formularios*/
+form fieldset {
+    border: none;
+}
+
+/* Formato de los títulos de cada grupo de campos de los formularios*/
+fieldset legend {
+    color: #db6400;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+/* Formato de las cajitas input de los formularios*/
+form input {
+    width:100%;
+	padding: 1% 0 1% 1%;
+	border: none;
+    background-color:white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+/* Formato de los botones de enviar y resetear los formularios*/
+form input[type="submit"], form input[type="reset"]{
+	font-size: 0.9em;
+    width: 27%;
+    height: 2em;
+    display: inline;
+}
+
+/* Formato de los botones de enviar y resetear los formularios cuando se pasa el ratón por encima*/
+form input[type="submit"]:hover, form input[type="reset"]:hover{
+	cursor:pointer;
+    color:white;
+    background-color:#5eaaa8;
+    Border:#5eaaa8;
+}
+
+/* Formato de las columnas de la derecha de los formularios*/
+form .dcha {
+    float: right;
+}
+
+/* Formato de las cajitas input de las columnas de la derecha de los formularios*/
+form .dcha input {
+    padding: 2% 0 1% 2%;
+    margin-right: 1%;
+}
+
+/* Formato de las columnas de la izquierda de los formularios*/
+form .izq {
+    float:left 
+}
+
+/* Formato de las cajitas input de las columnas de la izquierda de los formularios*/
+form .izq input {
+    padding: 2% 0 1% 2%;
+    margin-right: 1%;
+}
+
+
+form #tlf {
+    width:100%;
+}
+
+form #email {
+    width:100%;
+    margin-right: 0;
+}
+
+/*Formato de las columnas que aparecen en los formularios*/
+form .columna{
+    width: 49%;
+    display: inline-block;
+    margin: 1px;
+}
+
+/*Formato de la sección en la que aparecen los botones en los formularios*/
+form .botones{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad de formularios
+---------------------------------------------
+*/
+/*Cambios para monitores de más de 1300px de ancho*/
+@media screen and (min-width: 1300px) {
+    form {
+        width: 45%;
+    }
+}
+/*
+    No hay cambios necesarios para monitores de anchura entre 900 y 1300,
+    ya que la web se ha diseñado con esa anchura en mente.
+    El diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro
+    en posición horizontal
+*/
+
+/*Cambios para monitores de menos de 900px de ancho 
+    iPad, iPad Mini, iPad Pro en vertical*/
+@media screen and (max-width: 900px) {
+    /*Reducimos los márgenes y ampliamos el ancho del main del FORMULARIO*/
+    form {
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+    }
+}
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*Estructura genérica de los formularios en versión móvil*/
+    form {
+        padding: 2%;
+        /*overflow-x:hidden; /*no muestra el contenido que se salga de las dimensiones especificadas en el contenedor*/
+    }
+
+    /*Los botones de Enviar y Reestablecer los disponemos uno debajo de otro*/
+    form .botones input {
+        width: 100%;
+        display: block;
+       
+    }
+
+    /*Estructura de la sección que contiene los botones de los formularios*/
+    form .botones {
+        width: 93%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+        position: auto;
+     
+    }  
+
+    /*Cambia el formato de las secciones que están distribuidas en columnas para que cada una ocupe toda la pantalla
+    y mostrarlas una debajo de otra */
+    form .columna {
+        width: 95%;
+    }
+
+    form .izq {
+        width: 99%;
+    }
+
+    form .dcha {
+        width: 100%;
+    }     
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioContacto.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Formato de la caja en la que se introduce el mensaje*/
+.formContacto textarea{
+	width:100%;
+	height:100px;
+	border:1px solid white;
+	border-radius:3px;
+	background-color: white;	
+    margin-top: 1%;
+    margin-bottom: 4%;
+	
+}
+
+/*Formato del desplegable del formulario de contacto*/
+.formContacto select{
+	width:100%;
+    height: 25px;
+    padding: 1px;
+    background-color: white;
+    border: white;
+    margin-top: 1%;
+    margin-bottom: 4%;
+
+}
+
+/*Formato del texto introductorio del fomulario de contacto*/
+.formContacto #introForm {
+    text-align: center;
+    margin: 50px;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad formularioContacto.html
+---------------------------------------------
+*/
+/*
+    Parte de la adaptabilidad de esta página está gestionada
+    por los estilos genéricos aplicados a formularios. Sólo
+    se requieren cambios específicos para la página para 
+    pantallas de menos de 700px de ancho
+*/
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+
+    /*FORMULARIO CONTACTO Formato del header en la versión móvil*/
+    .formContacto header {
+        background-image: none;
+    }
+
+    /*FORMULARIO CONTACTO Formato de la caja de texto de localidad en la versión móvil*/
+    .formContacto input #loc {
+        width: 98%;
+        padding: 0
+    }     
+}
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de quienesSomos.html
+---------------------------------------------
+---------------------------------------------
+*/
+
+.quienesSomos main{
+    align-items: center;
+}
+
+/*Bloque de texto*/
+.quienesSomos #quienesSomos {
+    margin-right:5%;
+    margin-left:2%;
+    line-height: 25px;
+    width:45%;
+    height:40%;
+    float: left;
+    overflow:auto;
+    margin-bottom:2%;
+    text-align: justify;
+    display: inline-block;
+    
+}
+
+/*Vídeo*/
+.quienesSomos #video iframe{
+    margin-top: 2%;
+    margin-bottom:2%;
+    float: left;
+    width: 45vw; 
+    height: 50vh; 
+    display: inline-block;
+}
+
+/*Aside. Título "publicidad"*/
+.quienesSomos #publititulo {
+    display: block;
+    margin-left: 5%;
+}
+
+/*Aside. Publicidad: imagen 1*/
+.quienesSomos #publicidad #train {
+    position:relative;
+    margin-left: 3%;
+    width: 15%; 
+    height: 25%;
+}
+
+/*Aside. Publicidad: imagen 2*/
+.quienesSomos #publicidad #vet {
+    position:relative;
+    margin-left: 1%;
+    width: 25%; 
+    height: 15%;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad para quienesSomos.html
+---------------------------------------------
+*/
+
+/* No hay cambios necesarios para los siguientes formatos:
+    - monitores de más de 1300px de ancho.
+    - monitores de anchura entre 900 y 1300 (ya que la web se ha diseñado con esa anchura en mente).
+    - el diseño por defecto incluye compatibilidad con iPad, iPad Mini y iPad Pro en posición horizontal. 
+*/
+
+/*iPad en posición vertical.*/
+@media screen and (max-width: 900px) {
+
+    .quienesSomos #quienesSomos, .quienesSomos  #video iframe{
+        width: 95%;
+        display: block;
+        clear:both;
+    }
+    
+    .quienesSomos aside{
+        display: block;
+        clear: both;
+    }
+}
+
+/*iPhone en posición vertical*/
+@media screen and (max-width:700px) {
+    .quienesSomos header {
+        background-image: none;
+    }
+
+/*
+---------------------------------------------
+---------------------------------------------
+Estilo específico de formularioAdopcion
+---------------------------------------------
+---------------------------------------------
+*/
+
+/*Modificación del formato de leyendas de fieldset*/
+.formAdopcion fieldset legend {
+    padding-top: 5%;
+    text-align: left;
+}
+
+/*Elimina el margen de los campos de input para poder 
+establecerlo según el campo específico*/
+.formAdopcion input {
+    margin-bottom: unset;
+}
+
+/*Elimina el width=100% de las checkboxes y los botones radio*/
+.formAdopcion input[type="checkbox"], .formAdopcion input[type="radio"],
+.formAdopcion #idMascota {
+    width: unset;
+}
+
+/*Establece el formato de los campos select*/
+.formAdopcion select {
+    padding: 1%;
+    height: 2.3em;
+    background-color: white;
+    border: white;
+    margin-bottom: 5%;
+}
+
+/*Elimina el formato de textarea*/
+.formAdopcion textarea {
+    width: unset;
+    height: unset;
+}
+
+/*Formato de del select del tamaño, ya que es multiselect*/
+.formAdopcion select[multiple] {
+    height: unset;
+    padding:unset;
+}
+
+/*Cambia el formato de las leyendas de los grupos de botones radio*/
+.formAdopcion fieldset fieldset legend {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #2f2f6a;
+    text-align: left;
+    font-size: 1em;
+    margin-top: unset;
+    margin-bottom: unset;
+    font-weight: bold;
+    padding-top: unset;
+}
+
+/*Cambia el formato de las label de los grupos de botones radio*/
+.formAdopcion fieldset fieldset label {
+    font-weight: lighter;
+}
+
+/*Añade margen superior a los grupos dentro de un fieldset*/
+.formAdopcion fieldset fieldset {
+    margin-top:2%;
+}
+
+/*Añade margen superior a los campos de teléfono e email*/
+.formAdopcion #datos-contacto section{
+    margin-top: 4%;
+}
+
+/*Cambia el formato de la observación con * sobre ID Mascota*/
+.formAdopcion .observacion {
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom:3%
+}
+
+/*Formato de los select sobre la mascota*/
+.formAdopcion .izq select, .formAdopcion .dcha select {
+
+    width: 100%;
+}
+
+/*Alinea la label del multiselect con el borde superior del campo*/
+.formAdopcion label[for="tamMascota"] {
+    vertical-align:top;
+}
+
+/*Corrige la posición del botón radio Otro en el grupo de vivienda*/
+.formAdopcion #casa, .formAdopcion label[for="casa"]  {
+    margin-bottom: 1em;
+}
+
+/*Alinea el botón radio Otro con el textarea relacionado*/
+.formAdopcion #otraVivienda, .formAdopcion label[for="otraVivienda"]  {
+    margin-top:0;
+    vertical-align: top;
+}
+
+/*Esconde las label del textarea de descripción de vivienda y
+los botones de submit y reseteo.
+Nota: es importante mantener la label aunque no se muestre
+para aquellas personas que usen un lector de pantalla*/
+.formAdopcion label[for="descVivienda"] {
+    display: none;
+}
+
+/*
+---------------------------------------------
+Adaptabilidad formularioAdopcion.html
+---------------------------------------------
+*/
+/*
+    Parte de la adaptabilidad de esta página está gestionada
+    por los estilos genéricos aplicados a formularios. Sólo
+    se requieren cambios específicos para la página para 
+    pantallas de menos de 700px de ancho
+*/
+
+/*Cambios para monitores de menos de 700px de ancho 
+iPhone en vertical*/
+@media screen and (max-width: 700px) {
+    /*Formato del header en la versión móvil*/
+    .formAdopcion header {
+        background-image: none;
+    }
+
+    /*Establece anchura máxima de la sección de entorno del formulario
+    para prevenir overflow*/
+    .formAdopcion #datos-entorno, .formAdopcion #datos-entorno fieldset,
+    .formAdopcion #datos-entorno fieldset > *{
+        max-width: 99%;
+        text-align: left;
+    }
+
+    /*Anchura del textarea del formulario de adopción*/
+    .formAdopcion #datos-entorno textarea {
+        width:95%;
+    }
+     
+}
