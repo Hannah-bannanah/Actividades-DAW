@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.empleado__actions {
+	display:flex;
+}
+.empleado__action {
+	margin:1rem;
+	height: 20rem;
+	width: 20rem;
+	border: 2px solid #24cbd3;
+	background: rgb(36, 203, 211, 0.3);
+	color: purple;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	box-shadow: #ccc 2px 2px 5px;
+	cursor: pointer;
+}
+
+
+
+.empleado__action:hover {
+	transform: perspective(50rem) translateZ(3rem);
+}
+
+.empleado__actions a{
+	text-decoration: none;
+	font-weight:bold;
+}

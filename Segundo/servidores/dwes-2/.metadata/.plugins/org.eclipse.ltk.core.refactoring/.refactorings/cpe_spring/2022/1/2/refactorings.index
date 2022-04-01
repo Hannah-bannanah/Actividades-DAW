@@ -1,0 +1,9 @@
+1641387795312	Rename field 'jefeProyecto'
+1641387923184	Rename field 'Empleado'
+1641500363104	Rename type 'Perfile'
+1641501377845	Rename type 'PerfileDaoImpl'
+1641501413897	Rename type 'IntPerfileDao'
+1641501437386	Rename type 'IntPerfileRepo'
+1641502783874	Move compilation units
+1641502827014	Delete element
+1641502997539	Rename field 'empleado'

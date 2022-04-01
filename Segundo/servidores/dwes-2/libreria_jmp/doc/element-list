@@ -1,0 +1,7 @@
+com.ite.libreria_jmp
+com.ite.libreria_jmp.controller
+com.ite.libreria_jmp.model.beans
+com.ite.libreria_jmp.repository
+com.ite.libreria_jmp.security
+com.ite.libreria_jmp.service
+com.ite.libreria_jmp.util

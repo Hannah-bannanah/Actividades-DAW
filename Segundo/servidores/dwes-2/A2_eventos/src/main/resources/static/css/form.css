@@ -1,0 +1,60 @@
+form {
+	width: 80%;
+	margin: 1rem auto
+}
+
+fieldset {
+	width: 80%;
+	margin: 2rem auto;
+	border: none;
+	border-bottom: 1px solid #24cbd3;
+	padding-bottom: 2rem;
+}
+
+form fieldset:first-child {
+	border: 2px solid purple;
+}
+
+.form-title {
+	color:purple;
+	font-size: 1.2rem;
+}
+
+fieldset legend {
+	color: purple;
+	font-style: italic;
+}
+
+.fieldset-row {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.fieldset-column {
+	display: flex;
+	flex-direction:column;
+	width: 50%;
+	padding: 1rem;
+}
+
+.inline-column {
+	flex-direction: row;
+}
+
+.block-fieldset {
+	display:flex;
+	flex-direction: column;
+	width: 20rem;
+}
+
+.block-fieldset > label {
+	margin-top: 1rem;
+}
+
+.form__actions {
+	text-align: center;
+}
+
+button {
+	background: inherit;
+}

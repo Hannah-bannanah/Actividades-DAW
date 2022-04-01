@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.main-nav {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0;
+  border: 1px #24cbd3 solid;
+  border-width: 2px 1px;
+}
+
+.main-nav__item:first-child,
+.main-nav__item:last-child {
+	border-width: 2px
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  color: black;
+  cursor: pointer;
+  border: 2px #24cbd3 solid;
+}
+
+.main-nav__item .btn-link {
+	border: unset;
+}
+
+.btn-link:hover,
+.btn-link:active,
+.main-nav__item.current-tab .btn-link  {
+  color: black;
+  background-color: #24cbd3;
+}
+
+h2 {
+  color:purple;
+  font-size: 1.5rem;
+}
+
+.cta {
+	font-weight: bold;
+	background: purple;
+	color: white;
+	border-color: purple;
+}
+
+.cta:active,
+.cta:hover {
+	background: white;
+	color:purple;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+form {
+	width: 80%;
+	margin: 1rem auto;
+}
+
+fieldset {
+	width: 80%;
+	margin: 2rem auto;
+	border: none;
+	text-align: center;
+}
+
+form fieldset:first-child {
+	border: 2px solid #0B4F6C;
+}
+
+.form-title {
+	color: #0B4F6C;
+	font-size: 1.2rem;
+}
+
+fieldset legend {
+	color: #0B4F6C;
+	font-style: italic;
+}
+
+.form__actions {
+	text-align: center;
+}
+
+button {
+	background: inherit;
+}

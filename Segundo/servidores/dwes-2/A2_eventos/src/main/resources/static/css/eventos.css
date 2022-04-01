@@ -1,0 +1,35 @@
+#filtros {
+  margin: 1rem;
+}
+
+#filtros > * {
+  margin: 1rem;
+}
+
+.filtro-activo {
+	display: none;
+}
+
+td.tabla-eventos__accion {
+  border-color: #24cbd3;
+}
+
+.editar a{
+  color: black;
+}
+
+.eliminar a{
+  color: hsl(17, 81%, 49%);
+}
+
+.cancelar a{
+  color: #a30a52;
+}
+
+.activar a{
+	color: #227030;
+}
+
+.detalle a{
+	color: black;
+}

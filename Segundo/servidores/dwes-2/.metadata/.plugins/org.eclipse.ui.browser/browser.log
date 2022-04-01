@@ -1,0 +1,13 @@
+
+Mar 26, 2022 10:29:05.409 NEW SESSION
+Mar 26, 2022 10:29:05.409 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:05.429 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:05.437 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:05.482 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:06.597 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:06.607 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:06.613 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:06.639 ATTENTION: default value of option mesa_glthread overridden by environment.
+Mar 26, 2022 10:29:15.735 
+Mar 26, 2022 10:29:15.736 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+Mar 26, 2022 10:29:15.736 

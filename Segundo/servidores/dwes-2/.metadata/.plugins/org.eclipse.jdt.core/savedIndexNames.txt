@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/home/hannah/Dropbox/2oDAW/DWES/dwes-2/.metadata/.plugins/org.eclipse.jdt.core
+1964363180.index
+1285091689.index
+2542511211.index
+2264846730.index
+1865797976.index

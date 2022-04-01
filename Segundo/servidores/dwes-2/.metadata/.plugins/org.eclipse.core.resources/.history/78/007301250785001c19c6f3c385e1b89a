@@ -1,0 +1,40 @@
+package com.ite.cajero_rest.controller;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ite.cajero_rest.model.beans.Cuenta;
+import com.ite.cajero_rest.service.IntCuentaSvc;
+
+@RestController
+public class HomeController {
+	
+	@Autowired
+	IntCuentaSvc csvc;
+	
+	@PostMapping("/login")
+	public String login(@RequestBody int idCuenta, HttpSession sesion) {
+		String result ="";
+		
+		Cuenta cuenta = csvc.validarCuenta(idCuenta);		
+		if (cuenta != null) {
+			sesion.setAttribute("cuenta", cuenta);
+			ObjectMapper om = new ObjectMapper();
+			try {
+				result = om.writeValueAsString(cuenta);
+			} catch {
+				result = "{success: 0}"
+			}
+//			result = "{success: 1, cuenta: {" + "}}";
+		} else {
+			result = "{success: 0}";
+		}
+		return result;
+	}
+}

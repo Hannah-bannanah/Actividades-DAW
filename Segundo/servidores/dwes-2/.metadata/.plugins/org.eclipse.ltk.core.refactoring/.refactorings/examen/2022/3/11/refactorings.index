@@ -1,0 +1,13 @@
+1646647839300	Rename type 'ClienteController'
+1646731981208	Rename resource 'clientes.jsp'
+1646731983143	Move 'mispedidos.jsp' to 'cliente'
+1646731994655	Copy file
+1646732004808	Rename resource 'mispedidos.jsp'
+1646732008346	Move 'welcome.jsp' to 'cliente'
+1646732065431	Copy file
+1646732076113	Rename resource 'welcome.jsp'
+1646732431562	Move 'webapp' to 'main'
+1646733527029	Rename type 'IntPedidoRepo'
+1646736431695	Delete element
+1646754957187	Move 'welcome.jsp' to 'vistas'
+1646754980647	Move 'welcome.jsp' to 'cliente'

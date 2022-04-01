@@ -1,0 +1,35 @@
+1645629682446	Delete element
+1645780862482	Move 'webapp' to 'main'
+1645784598429	Rename resource 'menu.jsp'
+1645784634250	Delete element
+1645784640585	Delete elements
+1645784654376	Copy file
+1645785305418	Copy file
+1645785657242	Copy file
+1645785702605	Delete element
+1645785738204	Delete element
+1645787212755	Copy file
+1645787338479	Rename resource 'carrito.jsp'
+1645787344373	Rename resource 'titulo.jsp'
+1645787358455	Rename resource 'carritot.jsp'
+1645789227477	Delete element
+1645789251553	Rename type 'IntPerfilesSvc'
+1645791906242	Rename local variable 'aTomas'
+1645793905978	Rename type 'UsuarioService'
+1645793927794	Rename type 'IntPerfilRepository'
+1645793946635	Rename type 'IntUsuarioRepository'
+1645793959270	Rename type 'IntTemaRepository'
+1645795378474	Rename type 'IntLibroRepo'
+1645795389561	Rename type 'IntUsuarioRepo'
+1645795403148	Rename type 'IntTemaRepo'
+1645795413812	Rename type 'IntPerfilRepo'
+1645809441804	Delete element
+1645810154291	Copy file
+1645874911416	Delete element
+1645879576558	Rename package 'com.ite.libreria_jmp.seguridad'
+1645901270209	Rename resource 'tema.jsp'
+1645901279432	Rename resource 'titulo.jsp'
+1645901290967	Move 'carrito.jsp' to 'cliente'
+1645901331322	Move 'temas.jsp' to 'admon'
+1645901350782	Move 'header.jsp' to 'compartido'
+1645901404906	Move 2 resources to 'compartido'

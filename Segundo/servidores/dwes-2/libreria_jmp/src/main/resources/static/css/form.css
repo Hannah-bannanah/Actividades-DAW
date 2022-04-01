@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+form:not(.invisible) {
+	margin: 1rem auto;
+}
+legend {
+	color: #995D81;
+	font-family: Verdana, sans-serif;
+	font-size: 1.3rem;
+	font-style: italic;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: safe center;;
+}
+
+
+fieldset:not(.full-form) {
+	border: none;
+}
+
+input {
+	margin: auto 0.5rem;
+}

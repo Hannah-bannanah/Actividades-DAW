@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+main {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+main h2 {
+	grid-row: 1;
+}
+
+.columna-izquierda {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.columna-derecha {
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.feedback-usuario {
+	grid-row:3;
+}
+
+form {
+	padding-top: 1rem;
+}
+
+.form__actions {
+	outline: none;
+	border: none;
+	margin: 1rem 0;
+	padding: 0;
+	display:flex;
+	justify-content: space-between;
+}
+img {
+	width: 21rem;
+}

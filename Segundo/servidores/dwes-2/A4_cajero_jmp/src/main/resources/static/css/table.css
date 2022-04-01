@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.saldo {
+	float: right;
+}
+
+tr.ingreso {
+	color: #3C7C50;
+}
+
+tr.extraccion {
+	color: #a40606;
+}
+
+table {
+	width: 100%;
+	margin: 1rem auto;
+	border-collapse: collapse;
+	border: 1px solid #0B4F6C;
+}
+
+th {
+	background-color: #0B4F6C;
+	color: white;
+
+}
+
+tr:nth-child(even) {
+	background: rgba(138, 205, 234, 0.5);
+}
+
+td + td { 
+	border-left:1px solid #0B4F6C; 
+}
+
+th + th { 
+	border-left:1px solid white; 
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	max-width: 30rem;
+}
+
+.menu__item {
+	margin: 0.3rem;
+}

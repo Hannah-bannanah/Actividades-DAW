@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item key="create_constructor" value="false"/>
+		<item key="create_unimplemented" value="false"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="false"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="28"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="635"/>
+		<item key="DIALOG_HEIGHT" value="721"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="true"/>
+		<item key="InstanceOf" value="true"/>
+		<item key="Blocks" value="false"/>
+		<item key="Objects.equals &amp; Objects.hash" value="true"/>
+		<item key="LimitElements" value="false"/>
+		<item key="IgnoreDefault" value="true"/>
+		<item key="StringStyle" value="0"/>
+		<item key="LimitValue" value="10"/>
+		<item key="SkipNull" value="false"/>
+		<item key="ToStringTemplateSelected" value="0"/>
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item key="SortOrdering" value="false"/>
+		<item key="RemoveFinal" value="false"/>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="19"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="652"/>
+		<item key="DIALOG_HEIGHT" value="740"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DialogBounds_GenerateHashCodeEqualsDialog">
+		<item key="DIALOG_X_ORIGIN" value="59"/>
+		<item key="DIALOG_Y_ORIGIN" value="18"/>
+		<item key="DIALOG_WIDTH" value="572"/>
+		<item key="DIALOG_HEIGHT" value="622"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item key="DIALOG_X_ORIGIN" value="53"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="584"/>
+		<item key="DIALOG_HEIGHT" value="751"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="1642"/>
+		<item key="height" value="772"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="true"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="true"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="renameGetter" value="true"/>
+		<item key="renameSetter" value="true"/>
+		<item key="renameSubpackages" value="false"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="BreadcrumbItemDropDown">
+	</section>
+	<section name="JavadocWizardDialog">
+		<item key="DIALOG_X_ORIGIN" value="574"/>
+		<item key="DIALOG_Y_ORIGIN" value="112"/>
+		<item key="DIALOG_WIDTH" value="706"/>
+		<item key="DIALOG_HEIGHT" value="615"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="/usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="public"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="11"/>
+		<item key="antpath" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp/javadoc.xml"/>
+		<item key="destdir" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp/doc"/>
+		<section name="projects">
+			<section name="libreria_jmp_4.0">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp_4.0/doc"/>
+				<item key="antpath" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp_4.0/javadoc.xml"/>
+			</section>
+			<section name="libreria_jmp">
+				<item key="href" value=""/>
+				<item key="destdir" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp/doc"/>
+				<item key="antpath" value="/home/hannah/Dropbox/2oDAW/DWES/dwes-2/libreria_jmp/javadoc.xml"/>
+			</section>
+		</section>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="0"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="4"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="627"/>
+			<item key="DIALOG_Y_ORIGIN" value="189"/>
+			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		</section>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
+		<item key="GoIntoTopLevelTypeAction.isChecked" value="false"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_WIDTH" value="400"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT" value="320"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+	</section>
+</section>

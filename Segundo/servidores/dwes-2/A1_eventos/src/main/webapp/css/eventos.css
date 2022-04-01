@@ -1,0 +1,60 @@
+#filtros {
+  margin: 1rem;
+}
+
+#filtros > * {
+  margin: 1rem;
+}
+
+.filtro-activo {
+	display: none;
+}
+
+.tabla-eventos {
+  border-collapse: collapse;
+  display: table;
+  color: purple;
+}
+
+.tabla-eventos th {
+  padding: 1rem 3.5rem;
+  text-align: center;
+  background-color: #64657a;
+  border: 2px solid #64657a;
+  color: white;
+}
+
+.tabla-eventos td {
+  border: 2px solid #64657a;
+  padding: 1rem;
+  text-align: center;
+}
+
+th.buffer-cell,
+td.buffer-cell{
+  background-color: unset;
+  border: none;
+  width: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+td.tabla-eventos__accion {
+  border-color: #24cbd3;
+}
+
+.tabla-eventos a {
+  text-decoration: none;
+}
+
+.editar a{
+  color: black;
+}
+
+.eliminar a{
+  color: hsl(17, 81%, 49%);
+}
+
+.cancelar a{
+  color: #a30a52;
+}

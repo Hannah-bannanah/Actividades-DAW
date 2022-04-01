@@ -1,0 +1,10 @@
+@charset "UTF-8";
+main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+main > * {
+	margin: 1rem;
+}
